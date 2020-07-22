@@ -16,7 +16,7 @@ const Container = styled.div`
   color: ${(props) => props.theme.colors.darkgrey[0]};
   border: solid red thin;
 
-  @media (min-width: 1440px) {
+  @media (min-width: 1366px) {
     width: 60%;
     margin: 0 auto;
   }

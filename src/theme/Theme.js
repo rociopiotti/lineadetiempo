@@ -28,7 +28,7 @@ export const Container = styled.section`
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-around;
+  justify-content: flex;
   background-color: ${(props) => props.theme.colors.white};
   font-family: ${(props) => props.theme.fonts[1]};
   color: ${(props) => props.theme.colors.darkgrey};
