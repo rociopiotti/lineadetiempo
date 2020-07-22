@@ -1,7 +1,7 @@
 import React from "react";
 
 import styled from "styled-components/macro";
-import Icons from "../Icons/Icons";
+import Icon from "../Icon/Icon";
 
 import { Space } from "../../theme/Theme";
 
@@ -47,17 +47,17 @@ const Footer = () => {
       <SocialMenu>
         <SocialMenuItem>
           <SocialBtn>
-            <Icons type='instagram' />
+            <Icon type='instagram' />
           </SocialBtn>
         </SocialMenuItem>
         <SocialMenuItem>
           <SocialBtn>
-            <Icons type='github' />
+            <Icon type='github' />
           </SocialBtn>
         </SocialMenuItem>
         <SocialMenuItem>
           <SocialBtn>
-            <Icons type='behance' />
+            <Icon type='behance' />
           </SocialBtn>
         </SocialMenuItem>
       </SocialMenu>
