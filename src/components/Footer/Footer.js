@@ -1,7 +1,7 @@
 import React from "react";
+import Icon from "../Icon/Icon";
 
 import styled from "styled-components/macro";
-import Icon from "../Icon/Icon";
 
 import { Space } from "../../theme/Theme";
 
@@ -28,10 +28,11 @@ const SocialMenuItem = styled.li`
   list-style: none;
 `;
 const SocialBtn = styled.button`
+  width: 4vw;
+  height: 4vw;
   background-color: transparent;
   border: none;
 `;
-
 const Copyright = styled.p`
   background-color: transparent;
   border: none;
