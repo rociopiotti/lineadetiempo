@@ -1,10 +1,12 @@
 import React from "react";
 
 import styled from "styled-components/macro";
+import { Space } from "../../theme/Theme";
+
 // IMG
 import logo from "../../images/icons/Faviconfavicon.svg";
 
-const Nav = styled.div`
+const Nav = styled.nav`
   width: 100%;
   height: 15vh;
   overflow: hidden;
@@ -15,7 +17,7 @@ const Nav = styled.div`
   background-color: ${(props) => props.theme.colors.white};
   font-family: ${(props) => props.theme.fonts[1]};
   color: ${(props) => props.theme.colors.darkgrey};
-  letter-spacing: ${(props)=> props.theme.letterSpacing};
+  letter-spacing: ${(props) => props.theme.letterSpacing};
   border: solid green thin;
 `;
 
@@ -24,7 +26,7 @@ const Logo = styled.button`
   height: 50px;
   border: none;
   background-color: transparent;
-  margin-left: 5vw;
+  margin-left: ${(props) => props.theme.sideMargin};
 `;
 
 const LogoImg = styled.img`
@@ -35,11 +37,7 @@ const LogoImg = styled.img`
 const MenuLink = styled.a`
   text-decoration: none;
   font-size: ${(props) => props.theme.fontSizes.medium};
-  margin-right: 5vw;
-`;
-
-const Space = styled.span`
-  flex-grow: 1;
+  margin-right: ${(props) => props.theme.sideMargin};
 `;
 
 const Header = () => {

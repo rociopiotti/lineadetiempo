@@ -1,5 +1,5 @@
 import React from "react";
-import { ThemeProvider } from "styled-components/macro";
+import styled, { ThemeProvider } from "styled-components/macro";
 
 const theme = {
   colors: {
@@ -13,9 +13,15 @@ const theme = {
     medium: "1.5em",
     large: "3em",
   },
-  letterSpacing: "0.1em"
+  letterSpacing: "0.1em",
+  sideMargin: "5vw",
+
 
 };
+
+export const Space = styled.span`
+  flex-grow: 1;
+`;
 
 const Theme = ({ children }) => (
   <ThemeProvider theme={theme}>{children}</ThemeProvider>
