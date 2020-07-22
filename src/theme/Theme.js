@@ -15,12 +15,25 @@ const theme = {
   },
   letterSpacing: "0.1em",
   sideMargin: "5vw",
-
-
 };
 
 export const Space = styled.span`
   flex-grow: 1;
+`;
+
+export const Container = styled.section`
+  width: 100%;
+  height: 15vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  background-color: ${(props) => props.theme.colors.white};
+  font-family: ${(props) => props.theme.fonts[1]};
+  color: ${(props) => props.theme.colors.darkgrey};
+  letter-spacing: ${(props) => props.theme.letterSpacing};
+  border: solid orange thin;
 `;
 
 const Theme = ({ children }) => (

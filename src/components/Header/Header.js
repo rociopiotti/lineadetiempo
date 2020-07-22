@@ -34,11 +34,11 @@ const LogoImg = styled.img`
 
 const MenuLink = styled(Link)`
   text-decoration: none;
-  font-size: ${(props) => props.theme.fontSizes.small};
+  font-size: ${(props) => props.theme.fontSizes.extrasmall};
   margin-right: ${(props) => props.theme.sideMargin};
 
   @media (min-width: 1440px) {
-    font-size: ${(props) => props.theme.fontSizes.medium};
+    font-size: ${(props) => props.theme.fontSizes.small};
   }
 `;
 

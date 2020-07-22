@@ -17,22 +17,28 @@ const Container = styled.footer`
   border: solid blue thin;
   font-family: ${(props) => props.theme.fonts[1]};
 `;
+
 const SocialMenu = styled.ul`
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
-  margin-right: ${(props) => props.theme.sideMargin};
 `;
+
 const SocialMenuItem = styled.li`
   list-style: none;
 `;
 
 const SocialBtn = styled.button`
-  width: 4vw;
-  height: 4vw;
+  width: 2vw;
+  height: 2vw;
   background-color: transparent;
   border: none;
+  margin-right: 4vw;
+  @media (min-width: 1440px) {
+    width: 4vw;
+    height: 4vw;
+  }
 `;
 
 const Copyright = styled.p`
