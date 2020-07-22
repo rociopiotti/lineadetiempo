@@ -15,12 +15,13 @@ const Nav = styled.div`
   background-color: ${(props) => props.theme.colors.white};
   font-family: ${(props) => props.theme.fonts[1]};
   color: ${(props) => props.theme.colors.darkgrey};
+  letter-spacing: ${(props)=> props.theme.letterSpacing};
   border: solid green thin;
 `;
 
 const Logo = styled.button`
-  width: 150px;
-  height: 150px;
+  width: 50px;
+  height: 50px;
   border: none;
   background-color: transparent;
   margin-left: 5vw;
@@ -33,6 +34,7 @@ const LogoImg = styled.img`
 
 const MenuLink = styled.a`
   text-decoration: none;
+  font-size: ${(props) => props.theme.fontSizes.medium};
   margin-right: 5vw;
 `;
 
