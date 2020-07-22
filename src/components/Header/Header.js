@@ -19,8 +19,8 @@ const Nav = styled.div`
 `;
 
 const Logo = styled.button`
-  width: 8vw;
-  height: 8vw;
+  width: 150px;
+  height: 150px;
   border: none;
   background-color: transparent;
   margin-left: 5vw;
