@@ -23,7 +23,7 @@ export const Space = styled.span`
 
 export const Container = styled.section`
   width: 100%;
-  height: 15vh;
+  height: auto;
   overflow: hidden;
   display: flex;
   flex-direction: row;
