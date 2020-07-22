@@ -6,7 +6,7 @@ const theme = {
       darkgrey: "#343434",
       white: "#F2F2F2",
     },
-    fonts: ["sans-serif", "Roboto"],
+    fonts: ["sans-serif", "Mulish"],
     fontSizes: {
       small: "1em",
       medium: "2em",
