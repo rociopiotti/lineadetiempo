@@ -17,7 +17,7 @@ const Routes = () => {
   return (
     <PageManagerContext.Consumer>
       {(context) => (
-        <BrowserRouter basename='/public/webdesign/lineadetiempo'>
+        <BrowserRouter basename='/'>
           <Header />
           <Switch>
             <Route path='/about' component={About} />

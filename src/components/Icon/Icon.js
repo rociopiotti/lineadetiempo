@@ -9,8 +9,6 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 
 
-import styled from "styled-components/macro";
-
 const Icons = (props) => {
   // DEFINIR ICONS:
   let faIcon;
@@ -29,7 +27,7 @@ const Icons = (props) => {
       faIcon = null;
       break;
   }
-  return <FontAwesomeIcon icon={faIcon} size="md" />;
+  return <FontAwesomeIcon icon={faIcon} size="sm" />;
 };
 
 export default Icons;

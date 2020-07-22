@@ -27,12 +27,14 @@ const SocialMenu = styled.ul`
 const SocialMenuItem = styled.li`
   list-style: none;
 `;
+
 const SocialBtn = styled.button`
   width: 4vw;
   height: 4vw;
   background-color: transparent;
   border: none;
 `;
+
 const Copyright = styled.p`
   background-color: transparent;
   border: none;

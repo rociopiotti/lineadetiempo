@@ -1,10 +1,14 @@
 import React from "react";
 
+// STYLED
 import styled from "styled-components/macro";
 import { Space } from "../../theme/Theme";
 
 // IMG
 import logo from "../../images/icons/Faviconfavicon.svg";
+
+// ROUTER
+import { Link } from "react-router-dom";
 
 const Nav = styled.nav`
   width: 100%;
@@ -21,33 +25,31 @@ const Nav = styled.nav`
   border: solid green thin;
 `;
 
-const Logo = styled.button`
-  width: 50px;
-  height: 50px;
-  border: none;
+const LogoImg = styled.img`
+  width: 25px;
+  height: 25px;
   background-color: transparent;
   margin-left: ${(props) => props.theme.sideMargin};
 `;
 
-const LogoImg = styled.img`
-  width: 100%;
-  heught: 100%;
-`;
-
-const MenuLink = styled.a`
+const MenuLink = styled(Link)`
   text-decoration: none;
-  font-size: ${(props) => props.theme.fontSizes.medium};
+  font-size: ${(props) => props.theme.fontSizes.small};
   margin-right: ${(props) => props.theme.sideMargin};
+
+  @media (min-width: 1440px) {
+    font-size: ${(props) => props.theme.fontSizes.medium};
+  }
 `;
 
 const Header = () => {
   return (
     <Nav>
-      <Logo>
+      <Link to='/'>
         <LogoImg src={logo} alt='Logo' />
-      </Logo>
+      </Link>
       <Space />
-      <MenuLink>About</MenuLink>
+      <MenuLink to='/about'>About</MenuLink>
     </Nav>
   );
 };
