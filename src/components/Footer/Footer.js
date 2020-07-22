@@ -29,7 +29,7 @@ const SocialMenuItem = styled.li`
   list-style: none;
 `;
 
-const SocialBtn = styled.button`
+const SocialLink = styled.a`
   width: 2vw;
   height: 2vw;
   background-color: transparent;
@@ -51,23 +51,23 @@ const Copyright = styled.p`
 const Footer = () => {
   return (
     <Container>
-      <Copyright>by Rocío Piotti - 2020</Copyright>
+      <Copyright>by Rocío Piotti - 2020.</Copyright>
       <Space />
       <SocialMenu>
         <SocialMenuItem>
-          <SocialBtn>
+          <SocialLink href="https://www.instagram.com/piottirocio/" target="_blank">
             <Icon type='instagram' />
-          </SocialBtn>
+          </SocialLink>
         </SocialMenuItem>
         <SocialMenuItem>
-          <SocialBtn>
+          <SocialLink href="https://github.com/rociopiotti" target="_blank">
             <Icon type='github' />
-          </SocialBtn>
+          </SocialLink>
         </SocialMenuItem>
         <SocialMenuItem>
-          <SocialBtn>
+          <SocialLink href="https://www.behance.net/rocio-piotti" target="_blank">
             <Icon type='behance' />
-          </SocialBtn>
+          </SocialLink>
         </SocialMenuItem>
       </SocialMenu>
     </Container>
