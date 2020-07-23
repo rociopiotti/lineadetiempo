@@ -46,7 +46,6 @@ const App = () => {
     let regitroElements = [];
     let cultivoElements = [];
     
-
     for (let key in data) {
       if (key === "Registro") {
          regitroElements = [...regitroElements, ...data[key]];
@@ -58,7 +57,8 @@ const App = () => {
 
     return [regitroElements, cultivoElements];
   };
-  // handleDatabase();
+  
+  
   return (
     <PageManagerContext.Provider value={{ database: handleDatabase()}}>
       <Theme>
