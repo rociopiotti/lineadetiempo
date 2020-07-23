@@ -35,8 +35,9 @@ const App = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await axios.get("http://localhost:3000/database.json");
+      const response = await axios.get(URL_DB);
       setData(response.data);
+      
     };
     fetchData();
   }, []);
@@ -44,22 +45,19 @@ const App = () => {
   const handleDatabase = () => {
     let regitroElements = [];
     let cultivoElements = [];
+    let allElements = [];
 
     for (let key in data) {
-      if (key === "Registro") {
-        regitroElements = [...regitroElements, ...data[key]];
-      }
-      if (key === "Cultivo") {
-        cultivoElements = [...cultivoElements, ...data[key]];
-      }
+     
+      allElements = [...allElements, ...data[key]];
     }
-    console.log("regitroElements", regitroElements);
-    console.log("cultivoElements", cultivoElements);
-    return regitroElements, cultivoElements;
+    // console.log("regitroElements", regitroElements);
+    // console.log("cultivoElements", cultivoElements);
+    return (allElements);
   };
-  handleDatabase();
+  // handleDatabase();
   return (
-    <PageManagerContext.Provider value={{ handleDatabase: handleDatabase}}>
+    <PageManagerContext.Provider value={{ database: handleDatabase()}}>
       <Theme>
         <Container>
           <Routes />
