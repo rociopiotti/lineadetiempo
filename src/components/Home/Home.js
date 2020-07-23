@@ -6,8 +6,8 @@ import { Container } from "../../theme/Theme";
 const Home = () => {
   return (
     <Container>
-      <Cultivo />
       <Registro />
+      <Cultivo />
     </Container>
   );
 };

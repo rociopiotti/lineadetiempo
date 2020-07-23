@@ -4,10 +4,22 @@ import styled from "styled-components/macro";
 
 import { ContainerColumn } from "../../theme/Theme";
 
+// IMG
+import sampleImg from "../../images/cultivo/2017-04-24.gif";
+
+// VIDEO
+import sampleVideo from "../../images/cultivo/2017-05-01.mp4";
+
+const SectionHeader = styled.h2`
+  width: 100%;
+  font-size: ${(props) => props.theme.fontSizes.medium};
+  text-align: center;
+
+`;
+
 const TextContainer = styled.div`
   width: 100%;
   height: auto;
-  background-color: blue;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -17,7 +29,6 @@ const TextContainer = styled.div`
 const TextContent = styled.p`
   width: 100%;
   height: auto;
-  background-color: lightblue;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -40,9 +51,10 @@ const ImgContainer = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  margin-bottom: 2vh;
 `;
 
-const ImgContent = styled.p`
+const ImgContent = styled.img`
   width: 100%;
   height: auto;
   background-color: pink;
@@ -60,21 +72,25 @@ const VideoContainer = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  margin-bottom: 2vh;
+
 `;
 
-const VideoContent = styled.p`
+const VideoContent = styled.video`
   width: 100%;
   height: auto;
-  background-color: lightgreen;
+  background-color: pink;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
 `;
 
+
 const Cultivo = () => {
   return (
-    <ContainerColumn theme={{ testingBGColor: "lightblue" }}>
+    <ContainerColumn theme={{ testingColor: "coral" }}>
+      <SectionHeader>Cultivo</SectionHeader>
       <TextContainer>
         <TextContent>
           Et consectetur Lorem culpa nisi ex duis pariatur velit. Pariatur nulla
@@ -86,10 +102,10 @@ const Cultivo = () => {
         </TextContent>
       </TextContainer>
       <ImgContainer>
-        <ImgContent>IMG</ImgContent>
+        <ImgContent src= {sampleImg}/>
       </ImgContainer>
       <VideoContainer>
-        <VideoContent>VIDEO</VideoContent>
+        <VideoContent src= {sampleVideo} autoPlay={true}/>
       </VideoContainer>
     </ContainerColumn>
   );

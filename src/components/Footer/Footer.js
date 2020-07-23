@@ -6,6 +6,8 @@ import styled from "styled-components/macro";
 import { Space } from "../../theme/Theme";
 
 const Container = styled.footer`
+  position: fixed;
+  bottom: 0;
   width: 100%;
   height: 15vh;
   display: flex;
@@ -55,17 +57,21 @@ const Footer = () => {
       <Space />
       <SocialMenu>
         <SocialMenuItem>
-          <SocialLink href="https://www.instagram.com/piottirocio/" target="_blank">
+          <SocialLink
+            href='https://www.instagram.com/piottirocio/'
+            target='_blank'>
             <Icon type='instagram' />
           </SocialLink>
         </SocialMenuItem>
         <SocialMenuItem>
-          <SocialLink href="https://github.com/rociopiotti" target="_blank">
+          <SocialLink href='https://github.com/rociopiotti' target='_blank'>
             <Icon type='github' />
           </SocialLink>
         </SocialMenuItem>
         <SocialMenuItem>
-          <SocialLink href="https://www.behance.net/rocio-piotti" target="_blank">
+          <SocialLink
+            href='https://www.behance.net/rocio-piotti'
+            target='_blank'>
             <Icon type='behance' />
           </SocialLink>
         </SocialMenuItem>

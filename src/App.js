@@ -6,7 +6,6 @@ import styled from "styled-components/macro";
 const Container = styled.div`
   width: 100%;
   heigth: 100%;
-  overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;

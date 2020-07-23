@@ -17,7 +17,7 @@ const theme = {
   sideMargin: "5vw",
 
   // -------------------> TESTING PROPERTIES <------------------- //
-  testingBGColor: "lightgreen",
+  testingColor: "lightgreen",
 };
 
 export const Space = styled.span`
@@ -36,16 +36,20 @@ export const Container = styled.section`
   color: ${(props) => props.theme.colors.darkgrey};
   letter-spacing: ${(props) => props.theme.letterSpacing};
   border: solid orange thin;
+  position: relative;
+  top: 15vh;
 `;
 
 export const ContainerColumn = styled.section`
   width: 50%;
-  height: auto;
+  height: 100%;
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: ${(props) => props.theme.testingBGColor};
+  border: thin solid ${(props) => props.theme.testingColor};
+  
 `;
 
 const Theme = ({ children }) => (

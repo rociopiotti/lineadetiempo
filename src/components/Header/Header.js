@@ -13,7 +13,6 @@ import { Link } from "react-router-dom";
 const Nav = styled.nav`
   width: 100%;
   height: 15vh;
-  overflow: hidden;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -23,6 +22,8 @@ const Nav = styled.nav`
   color: ${(props) => props.theme.colors.darkgrey};
   letter-spacing: ${(props) => props.theme.letterSpacing};
   border: solid green thin;
+  position:fixed;
+  top:0;
 `;
 
 const LogoImg = styled.img`
