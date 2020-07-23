@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components/macro";
 
 import { ContainerColumn } from "../../theme/Theme";
@@ -59,10 +59,14 @@ const ImgContent = styled.img`
   justify-content: center;
 `;
 
-
-const Registro = ({registroElements}) => {
-  console.log(registroElements);
-
+const Registro = ({ registroElements }) => {
+  const [element, setElement] = useState(false);
+  const handleElement = () => {
+    let element = registroElements.filter((item) => {
+      return item.type === "text";
+    });
+  };
+  handleElement();
   return (
     <ContainerColumn theme={{ testingColor: "coral" }}>
       <SectionHeader>Registro</SectionHeader>
