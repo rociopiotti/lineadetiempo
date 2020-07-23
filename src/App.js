@@ -1,7 +1,16 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Routes from "./router/Routes";
 import Theme from "./theme/Theme";
 import styled from "styled-components/macro";
+
+// CONTEXT
+import PageManagerContext from "./context/pageManager-context";
+
+// AXIOS
+import axios from "axios";
+
+// DATABASE PATH
+import { URL_DB } from "./utils/path";
 
 const Container = styled.div`
   width: 100%;
@@ -21,14 +30,27 @@ const Container = styled.div`
   }
 `;
 
-function App() {
+const App = () => {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const response = await axios.get("http://localhost:3000/database.json");
+      setData(response.data);
+      console.log(response.data)
+    };
+    fetchData();
+  }, []);
+
   return (
-    <Theme>
-      <Container>
-        <Routes />
-      </Container>
-    </Theme>
+    <PageManagerContext.Provider value={{}}>
+      <Theme>
+        <Container>
+          <Routes />
+        </Container>
+      </Theme>
+    </PageManagerContext.Provider>
   );
-}
+};
 
 export default App;
