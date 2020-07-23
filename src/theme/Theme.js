@@ -8,13 +8,16 @@ const theme = {
   },
   fonts: ["sans-serif", "Mulish"],
   fontSizes: {
-    extrasmall: "0.8em",
-    small: "1em",
-    medium: "1.5em",
-    large: "3em",
+    extrasmall: "0.8rem",
+    small: "1rem",
+    medium: "1.5rem",
+    large: "3rem",
   },
-  letterSpacing: "0.1em",
+  letterSpacing: "0.1rem",
   sideMargin: "5vw",
+
+  // -------------------> TESTING PROPERTIES <------------------- //
+  testingBGColor: "lightgreen",
 };
 
 export const Space = styled.span`
@@ -24,7 +27,6 @@ export const Space = styled.span`
 export const Container = styled.section`
   width: 100%;
   height: auto;
-  overflow: hidden;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -34,6 +36,16 @@ export const Container = styled.section`
   color: ${(props) => props.theme.colors.darkgrey};
   letter-spacing: ${(props) => props.theme.letterSpacing};
   border: solid orange thin;
+`;
+
+export const ContainerColumn = styled.section`
+  width: 50%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: ${(props) => props.theme.testingBGColor};
 `;
 
 const Theme = ({ children }) => (
