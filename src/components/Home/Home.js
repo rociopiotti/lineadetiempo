@@ -13,13 +13,11 @@ const Home = () => {
   if(!database){
     return
   }
-  console.log(database[0])
-  console.log(database[1])
 
   return (
     <Container>
-      <Registro />
-      <Cultivo />
+      <Registro registroElements = {database[0]} />
+      <Cultivo cultivoElements = {database[1]}/>
     </Container>
   );
 };

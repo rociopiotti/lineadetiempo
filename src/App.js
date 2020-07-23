@@ -54,8 +54,10 @@ const App = () => {
          cultivoElements = [...cultivoElements, ...data[key]];
       }
     }
+   
 
     return [regitroElements, cultivoElements];
+
   };
   
   

@@ -60,7 +60,9 @@ const ImgContent = styled.img`
 `;
 
 
-const Registro = () => {
+const Registro = ({registroElements}) => {
+  console.log(registroElements);
+
   return (
     <ContainerColumn theme={{ testingColor: "coral" }}>
       <SectionHeader>Registro</SectionHeader>
