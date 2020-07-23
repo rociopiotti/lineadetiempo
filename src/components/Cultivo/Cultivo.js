@@ -24,7 +24,12 @@ const TextContent = styled.p`
   justify-content: center;
   text-align: center;
   padding: 2vw 2vh;
-  line-height: 1.3em;
+  line-height: 1.5em;
+  font-size: ${(props) => props.theme.fontSizes.extrasmall};
+
+  @media (min-width: 768px) {
+    font-size: ${(props) => props.theme.fontSizes.small};
+  }
 `;
 
 const ImgContainer = styled.div`
@@ -66,6 +71,7 @@ const VideoContent = styled.p`
   align-items: center;
   justify-content: center;
 `;
+
 const Cultivo = () => {
   return (
     <ContainerColumn theme={{ testingBGColor: "lightblue" }}>

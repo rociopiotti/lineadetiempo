@@ -3,7 +3,7 @@ import React from "react";
 import { Container } from "../../theme/Theme";
 import styled from "styled-components";
 
-const ConteinerModify = styled(Container)`
+const ContainerModify = styled(Container)`
   flex-direction: column;
 `;
 
@@ -40,7 +40,7 @@ const SectionContent = styled.p`
 
 const About = () => {
   return (
-    <ConteinerModify>
+    <ContainerModify>
       <SectionContainer>
         <SectionHeader>Linea de tiempo</SectionHeader>
         <SeparationLine />
@@ -62,7 +62,7 @@ const About = () => {
           compañías de teatro.
         </SectionContent>
       </SectionContainer>
-    </ConteinerModify>
+    </ContainerModify>
   );
 };
 
