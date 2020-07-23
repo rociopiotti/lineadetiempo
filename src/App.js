@@ -45,15 +45,18 @@ const App = () => {
   const handleDatabase = () => {
     let regitroElements = [];
     let cultivoElements = [];
-    let allElements = [];
+    
 
     for (let key in data) {
-     
-      allElements = [...allElements, ...data[key]];
+      if (key === "Registro") {
+         regitroElements = [...regitroElements, ...data[key]];
+      }
+      if (key === "Cultivo") {
+         cultivoElements = [...cultivoElements, ...data[key]];
+      }
     }
-    // console.log("regitroElements", regitroElements);
-    // console.log("cultivoElements", cultivoElements);
-    return (allElements);
+
+    return [regitroElements, cultivoElements];
   };
   // handleDatabase();
   return (

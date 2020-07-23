@@ -9,7 +9,13 @@ import Context from "../../context/pageManager-context";
 const Home = () => {
   
   const { database } = useContext(Context);
-  console.log(database)
+
+  if(!database){
+    return
+  }
+  console.log(database[0])
+  console.log(database[1])
+
   return (
     <Container>
       <Registro />
