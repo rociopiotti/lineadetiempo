@@ -25,11 +25,12 @@ export const Space = styled.span`
 `;
 
 export const Container = styled.section`
+
   width: 100%;
   height: auto;
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-start;
   justify-content: flex;
   background-color: ${(props) => props.theme.colors.white};
   font-family: ${(props) => props.theme.fonts[1]};
@@ -42,13 +43,15 @@ export const Container = styled.section`
 
 export const ContainerColumn = styled.section`
   width: 50%;
-  height: 100%;
+  height: auto;
   position: relative;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   border: thin solid ${(props) => props.theme.testingColor};
+  top:0;
+  margin:0;
   
 `;
 

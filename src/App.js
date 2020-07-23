@@ -14,7 +14,7 @@ const Container = styled.div`
   font-family: ${(props) => props.theme.fonts[0]};
   color: ${(props) => props.theme.colors.darkgrey[0]};
   border: solid red thin;
-
+  position: relative;
   @media (min-width: 1366px) {
     width: 60%;
     margin: 0 auto;
