@@ -37,13 +37,29 @@ const App = () => {
     const fetchData = async () => {
       const response = await axios.get("http://localhost:3000/database.json");
       setData(response.data);
-      console.log(response.data)
     };
     fetchData();
   }, []);
 
+  const handleDatabase = () => {
+    let regitroElements = [];
+    let cultivoElements = [];
+
+    for (let key in data) {
+      if (key === "Registro") {
+        regitroElements = [...regitroElements, ...data[key]];
+      }
+      if (key === "Cultivo") {
+        cultivoElements = [...cultivoElements, ...data[key]];
+      }
+    }
+    console.log("regitroElements", regitroElements);
+    console.log("cultivoElements", cultivoElements);
+    return regitroElements, cultivoElements;
+  };
+  handleDatabase();
   return (
-    <PageManagerContext.Provider value={{}}>
+    <PageManagerContext.Provider value={{ handleDatabase: handleDatabase}}>
       <Theme>
         <Container>
           <Routes />
