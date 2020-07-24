@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import styled from "styled-components/macro";
 
 import { ContainerColumn } from "../../theme/Theme";
@@ -12,13 +12,14 @@ const SectionHeader = styled.h2`
   text-align: center;
 `;
 
-const TextContainer = styled.div`
+const ElementContainer = styled.div`
   width: 100%;
   height: auto;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  margin-bottom: 2vh;
 `;
 
 const TextContent = styled.p`
@@ -38,17 +39,6 @@ const TextContent = styled.p`
   }
 `;
 
-const ImgContainer = styled.div`
-  width: 100%;
-  height: auto;
-  background-color: violet;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 2vh;
-`;
-
 const ImgContent = styled.img`
   width: 100%;
   height: auto;
@@ -59,28 +49,34 @@ const ImgContent = styled.img`
   justify-content: center;
 `;
 
-const Registro = ({regitroAll, regitroTypes}) => {
- 
+const Registro = ({ registroAll, registroTypes }) => {
+  const filteredText = registroAll.filter((item, index) => {
+    return item.type.includes("text");
+  });
+
+  const renderText = filteredText.map((item, index) => (
+    <ElementContainer key={index}>
+      <TextContent>{item.content}</TextContent>
+    </ElementContainer>
+  ));
+
+  const filteredImg = registroAll.filter((item, index) => {
+    return item.type.includes("img");
+  });
+
+  const renderImg = filteredImg.map((item, index) => (
+    <ElementContainer key={index}>
+      <ImgContent src={item.src} alt={item.alt} />
+    </ElementContainer>
+  ));
+  console.log(filteredText);
+  console.log(filteredImg);
 
   return (
     <ContainerColumn theme={{ testingColor: "coral" }}>
       <SectionHeader>Registro</SectionHeader>
-      <TextContainer>
-        <TextContent>
-          Et consectetur Lorem culpa nisi ex duis pariatur velit. Pariatur nulla
-          eu amet exercitation et officia voluptate ullamco elit pariatur in
-          ullamco. Aute minim ea quis ad ipsum aliquip amet dolore amet id
-          aliqua. Id fugiat commodo exercitation velit enim. Qui sit dolor elit
-          et amet eu nostrud nisi Lorem tempor eiusmod veniam. Id officia amet
-          incididunt aliqua ut.
-        </TextContent>
-      </TextContainer>
-      <ImgContainer>
-        <ImgContent src={sampleImg} />
-      </ImgContainer>
-      <ImgContainer>
-        <ImgContent src={sampleImg} />
-      </ImgContainer>
+      {renderText}
+      {renderImg}
     </ContainerColumn>
   );
 };

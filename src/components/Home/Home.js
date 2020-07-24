@@ -12,7 +12,7 @@ const Home = () => {
  
   return (
     <Container>
-      <Registro regitroAll={database[0]} regitroTypes={database[2]} />
+      <Registro registroAll={database[0]} registroTypes={database[2]} />
       <Cultivo cultivoAll={database[1]} cultivoTypes={database[3]} />
     </Container>
   );

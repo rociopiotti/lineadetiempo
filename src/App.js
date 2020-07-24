@@ -42,17 +42,17 @@ const App = () => {
   }, []);
 
   const handleDatabase = () => {
-    let regitroAll = [];
+    let registroAll = [];
     let cultivoAll = [];
     for (let key in data) {
       if (key === "Registro") {
-        regitroAll = [...regitroAll, ...data[key]];
+        registroAll = [...registroAll, ...data[key]];
       }
       if (key === "Cultivo") {
         cultivoAll = [...cultivoAll, ...data[key]];
       }
     }
-    const regitroTypes = regitroAll.map((element) => {
+    const registroTypes = registroAll.map((element) => {
       return element.type;
     });
 
@@ -60,7 +60,7 @@ const App = () => {
       return element.type;
     });
 
-    return [regitroAll, cultivoAll, regitroTypes, cultivoTypes];
+    return [registroAll, cultivoAll, registroTypes, cultivoTypes];
   };
 
   return (
