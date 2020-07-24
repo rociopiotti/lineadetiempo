@@ -50,33 +50,38 @@ const ImgContent = styled.img`
 `;
 
 const Registro = ({ registroAll, registroTypes }) => {
-  const filteredText = registroAll.filter((item, index) => {
-    return item.type.includes("text");
+  const handleElement = registroAll.filter((item, index) => {
+    return item.type;
   });
 
-  const renderText = filteredText.map((item, index) => (
-    <ElementContainer key={index}>
-      <TextContent>{item.content}</TextContent>
-    </ElementContainer>
-  ));
-
-  const filteredImg = registroAll.filter((item, index) => {
-    return item.type.includes("img");
+  const renderElements = handleElement.map((item, index) => {
+    let element;
+    switch (item.type) {
+      case "text":
+        element = (
+          <ElementContainer key={index}>
+            <TextContent>{item.content}</TextContent>
+          </ElementContainer>
+        );
+        break;
+      case "img":
+        element = (
+          <ElementContainer key={index}>
+            <ImgContent src={item.src} alt={item.alt} />
+          </ElementContainer>
+        );
+        break;
+      default:
+        element = null;
+        break;
+    }
+    return element;
   });
-
-  const renderImg = filteredImg.map((item, index) => (
-    <ElementContainer key={index}>
-      <ImgContent src={item.src} alt={item.alt} />
-    </ElementContainer>
-  ));
-  console.log(filteredText);
-  console.log(filteredImg);
 
   return (
     <ContainerColumn theme={{ testingColor: "coral" }}>
       <SectionHeader>Registro</SectionHeader>
-      {renderText}
-      {renderImg}
+      {renderElements}
     </ContainerColumn>
   );
 };
