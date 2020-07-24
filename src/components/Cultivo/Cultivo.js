@@ -87,7 +87,7 @@ const Cultivo = ({ cultivoAll }) => {
       case "video":
         element = (
           <ElementContainer key={index}>
-            <VideoContent src={item.src} alt={item.alt} autoplay loop muted playsinline/>
+            <VideoContent src={item.src} alt={item.alt} autoplay />
           </ElementContainer>
         );
         break;
