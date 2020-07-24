@@ -32,11 +32,17 @@ const Container = styled.div`
 
 const App = () => {
   const [data, setData] = useState([]);
+  const [error, setError] = useState({});
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await axios.get(URL_DB);
-      setData(response.data);
+      try {
+        setError({});
+        const response = await axios.get(URL_DB);
+        setData(response.data);
+      } catch (err) {
+        setError(err);
+      }
     };
     fetchData();
   }, []);
@@ -45,7 +51,7 @@ const App = () => {
     let registroAll = [];
     let cultivoAll = [];
     if (!data) {
-      console.log("HERA");
+      console.log("HERE");
       return;
     } else {
       for (let key in data) {

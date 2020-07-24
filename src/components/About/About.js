@@ -5,6 +5,8 @@ import styled from "styled-components";
 
 const ContainerModify = styled(Container)`
   flex-direction: column;
+  align-items: center;
+
 `;
 
 const SectionContainer = styled.section`
