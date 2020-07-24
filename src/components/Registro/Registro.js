@@ -59,14 +59,9 @@ const ImgContent = styled.img`
   justify-content: center;
 `;
 
-const Registro = ({ registroElements }) => {
-  const [element, setElement] = useState(false);
-  const handleElement = () => {
-    let element = registroElements.filter((item) => {
-      return item.type === "text";
-    });
-  };
-  handleElement();
+const Registro = ({regitroAll, regitroTypes}) => {
+ 
+
   return (
     <ContainerColumn theme={{ testingColor: "coral" }}>
       <SectionHeader>Registro</SectionHeader>

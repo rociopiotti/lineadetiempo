@@ -87,8 +87,8 @@ const VideoContent = styled.video`
 `;
 
 
-const Cultivo = ({cultivoElements}) => {
-  // console.log(cultivoElements);
+const Cultivo = ({cultivoElements, cultivoTypes}) => {
+  
   return (
     <ContainerColumn theme={{ testingColor: "coral" }}>
       <SectionHeader>Cultivo</SectionHeader>

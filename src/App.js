@@ -37,32 +37,34 @@ const App = () => {
     const fetchData = async () => {
       const response = await axios.get(URL_DB);
       setData(response.data);
-      
     };
     fetchData();
   }, []);
 
   const handleDatabase = () => {
-    let regitroElements = [];
-    let cultivoElements = [];
-    
+    let regitroAll = [];
+    let cultivoAll = [];
     for (let key in data) {
       if (key === "Registro") {
-         regitroElements = [...regitroElements, ...data[key]];
+        regitroAll = [...regitroAll, ...data[key]];
       }
       if (key === "Cultivo") {
-         cultivoElements = [...cultivoElements, ...data[key]];
+        cultivoAll = [...cultivoAll, ...data[key]];
       }
     }
-   
+    const regitroTypes = regitroAll.map((element) => {
+      return element.type;
+    });
 
-    return [regitroElements, cultivoElements];
+    const cultivoTypes = cultivoAll.map((element) => {
+      return element.type;
+    });
 
+    return [regitroAll, cultivoAll, regitroTypes, cultivoTypes];
   };
-  
-  
+
   return (
-    <PageManagerContext.Provider value={{ database: handleDatabase()}}>
+    <PageManagerContext.Provider value={{ database: handleDatabase() }}>
       <Theme>
         <Container>
           <Routes />
