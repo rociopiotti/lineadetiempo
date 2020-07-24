@@ -49,11 +49,11 @@ const ImgContent = styled.img`
 
 const Registro = ({ registroAll}) => {
 
-  const handleElement = registroAll.filter((item, index) => {
+  const filteredElements = registroAll.filter((item, index) => {
     return item.type;
   });
 
-  const renderElements = handleElement.map((item, index) => {
+  const item = filteredElements.map((item, index) => {
     let element;
     switch (item.type) {
       case "text":
@@ -80,7 +80,7 @@ const Registro = ({ registroAll}) => {
   return (
     <ContainerColumn theme={{ testingColor: "coral" }}>
       <SectionHeader>Registro</SectionHeader>
-      {renderElements}
+      {item}
     </ContainerColumn>
   );
 };

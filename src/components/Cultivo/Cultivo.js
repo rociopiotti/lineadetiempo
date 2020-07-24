@@ -14,10 +14,9 @@ const SectionHeader = styled.h2`
   width: 100%;
   font-size: ${(props) => props.theme.fontSizes.medium};
   text-align: center;
-
 `;
 
-const TextContainer = styled.div`
+const ElementContainer = styled.div`
   width: 100%;
   height: auto;
   display: flex;
@@ -43,17 +42,6 @@ const TextContent = styled.p`
   }
 `;
 
-const ImgContainer = styled.div`
-  width: 100%;
-  height: auto;
-  background-color: violet;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 2vh;
-`;
-
 const ImgContent = styled.img`
   width: 100%;
   height: auto;
@@ -62,18 +50,6 @@ const ImgContent = styled.img`
   flex-direction: row;
   align-items: center;
   justify-content: center;
-`;
-
-const VideoContainer = styled.div`
-  width: 100%;
-  height: auto;
-  background-color: green;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 2vh;
-
 `;
 
 const VideoContent = styled.video`
@@ -86,28 +62,46 @@ const VideoContent = styled.video`
   justify-content: center;
 `;
 
+const Cultivo = ({ cultivoAll }) => {
+  const filteredElements = cultivoAll.filter((item, index) => {
+    return item.type;
+  });
 
-const Cultivo = ({cultivoElements}) => {
-  
+  const item = filteredElements.map((item, index) => {
+    let element;
+    switch (item.type) {
+      case "text":
+        element = (
+          <ElementContainer key={index}>
+            <TextContent>{item.content}</TextContent>
+          </ElementContainer>
+        );
+        break;
+      case "img":
+        element = (
+          <ElementContainer key={index}>
+            <ImgContent src={item.src} alt={item.alt} />
+          </ElementContainer>
+        );
+        break;
+      case "video":
+        element = (
+          <ElementContainer key={index}>
+            <VideoContent src={item.src} alt={item.alt} autoplay loop muted playsinline/>
+          </ElementContainer>
+        );
+        break;
+      default:
+        element = null;
+        break;
+    }
+    return element;
+  });
+
   return (
     <ContainerColumn theme={{ testingColor: "coral" }}>
       <SectionHeader>Cultivo</SectionHeader>
-      <TextContainer>
-        <TextContent>
-          Et consectetur Lorem culpa nisi ex duis pariatur velit. Pariatur nulla
-          eu amet exercitation et officia voluptate ullamco elit pariatur in
-          ullamco. Aute minim ea quis ad ipsum aliquip amet dolore amet id
-          aliqua. Id fugiat commodo exercitation velit enim. Qui sit dolor elit
-          et amet eu nostrud nisi Lorem tempor eiusmod veniam. Id officia amet
-          incididunt aliqua ut.
-        </TextContent>
-      </TextContainer>
-      <ImgContainer>
-        <ImgContent src= {sampleImg}/>
-      </ImgContainer>
-      <VideoContainer>
-        <VideoContent src= {sampleVideo} autoPlay={true}/>
-      </VideoContainer>
+      {item}
     </ContainerColumn>
   );
 };

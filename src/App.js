@@ -44,16 +44,21 @@ const App = () => {
   const handleDatabase = () => {
     let registroAll = [];
     let cultivoAll = [];
-    for (let key in data) {
-      if (key === "Registro") {
-        registroAll = [...registroAll, ...data[key]];
+    if (!data) {
+      console.log("HERA");
+      return;
+    } else {
+      for (let key in data) {
+        if (key === "Registro") {
+          registroAll = [...registroAll, ...data[key]];
+        }
+        if (key === "Cultivo") {
+          cultivoAll = [...cultivoAll, ...data[key]];
+        }
       }
-      if (key === "Cultivo") {
-        cultivoAll = [...cultivoAll, ...data[key]];
-      }
-    }
 
-    return [registroAll, cultivoAll];
+      return [registroAll, cultivoAll];
+    }
   };
 
   return (
