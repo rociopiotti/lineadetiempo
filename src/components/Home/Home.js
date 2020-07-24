@@ -12,8 +12,8 @@ const Home = () => {
  
   return (
     <Container>
-      <Registro registroAll={database[0]} registroTypes={database[2]} />
-      <Cultivo cultivoAll={database[1]} cultivoTypes={database[3]} />
+      <Registro registroAll={database[0]} />
+      <Cultivo cultivoAll={database[1]} />
     </Container>
   );
 };

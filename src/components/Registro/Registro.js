@@ -3,8 +3,6 @@ import styled from "styled-components/macro";
 
 import { ContainerColumn } from "../../theme/Theme";
 
-// IMG
-import sampleImg from "../../images/registroFotografico/2017-05-01.gif";
 
 const SectionHeader = styled.h2`
   width: 100%;
@@ -49,7 +47,8 @@ const ImgContent = styled.img`
   justify-content: center;
 `;
 
-const Registro = ({ registroAll, registroTypes }) => {
+const Registro = ({ registroAll}) => {
+
   const handleElement = registroAll.filter((item, index) => {
     return item.type;
   });

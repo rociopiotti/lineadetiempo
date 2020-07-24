@@ -52,15 +52,8 @@ const App = () => {
         cultivoAll = [...cultivoAll, ...data[key]];
       }
     }
-    const registroTypes = registroAll.map((element) => {
-      return element.type;
-    });
 
-    const cultivoTypes = cultivoAll.map((element) => {
-      return element.type;
-    });
-
-    return [registroAll, cultivoAll, registroTypes, cultivoTypes];
+    return [registroAll, cultivoAll];
   };
 
   return (
