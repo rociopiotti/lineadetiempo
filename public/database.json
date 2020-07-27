@@ -25,7 +25,7 @@
             "title": "Bitacora",
             "type": "text",
             "alt": "",
-            "content": "Era otoño por lo tanto la lluvia, la humedad y las temperaturas medias hacen que las condiciones sean especiales para el crecimiento de estos seres en los pequeños espacios urbanos.",
+            "content": "Era otoño por lo tanto la lluvia, la humedad y las temperaturas medias hacen que las condiciones fuesen especiales para el crecimiento de estos seres en los pequeños espacios urbanos.",
             "src": "",
             "poster": "",
             "date": "May 01, 2017 15:15:15 UTC"
@@ -55,7 +55,7 @@
             "title": "Bitacora",
             "type": "text",
             "alt": "",
-            "content": "Nunca me animo a tocarlos ya que en los canteros donde crecen siempre hay excremento de mascotas y basura en descomposición.",
+            "content": "Nunca me animo a tocarlos, ya que en los canteros donde crecen siempre hay excremento de mascotas y basura en descomposición.",
             "src": "",
             "poster": "",
             "date": "May 11, 2017 15:15:15 UTC"
@@ -101,16 +101,6 @@
             "date": "May 18, 2017 15:15:15 UTC"
         },
         {
-            "id": "rf10",
-            "title": "Bitacora",
-            "type": "img",
-            "alt": "registro fotográfico de hongos urbanos",
-            "content": "",
-            "src": "/images/registroFotografico/2017-05-18.gif",
-            "poster": "",
-            "date": "May 18, 2017 15:15:15 UTC"
-        },
-        {
             "id": "rf11",
             "title": "Bitacora",
             "type": "text",
@@ -135,7 +125,7 @@
             "title": "Bitacora",
             "type": "text",
             "alt": "",
-            "content": "Me pregunto si es Reishi o es de la familia de los Ganoderma?",
+            "content": "Me pregunto si de familia de los Ganoderma?",
             "src": "",
             "poster": "",
             "date": "June 05, 2017 15:15:15 UTC"
@@ -146,32 +136,42 @@
             "type": "img",
             "alt": "registro fotográfico de hongos urbanos",
             "content": "",
-            "src": "/images/registroFotografico/2017-06-05.gif",
+            "src": "/images/registroFotografico/2017-07-01.gif",
             "poster": "",
-            "date": "June 06, 2017 15:15:15 UTC"
+            "date": "May 18, 2017 15:15:15 UTC"
         },
         {
             "id": "rf15",
             "title": "Bitacora",
-            "type": "text",
-            "alt": "",
-            "content": "Vuelvo a estos lugares y veo cómo evolucionan, cuántos días tardan en descomponerse. Desafortunadamente debo esperar un año para comprobar si vuelven a crecer en estos lugares.",
-            "src": "",
+            "type": "img",
+            "alt": "registro fotográfico de hongos urbanos",
+            "content": "",
+            "src": "/images/registroFotografico/2017-06-05.gif",
             "poster": "",
-            "date": "July 07, 2017 15:15:15 UTC"
+            "date": "June 06, 2017 15:15:15 UTC"
         },
         {
             "id": "rf16",
             "title": "Bitacora",
             "type": "text",
             "alt": "",
-            "content": "En Berlín se encuentran en un parque de grandes dimensiones llamado Tiergarten.",
+            "content": "Vuelvo a estos lugares y veo cómo evolucionan, cuántos días tardan en descomponerse. Desafortunadamente debo esperar un año para comprobar si vuelven a crecer en mismos lugares.",
+            "src": "",
+            "poster": "",
+            "date": "July 07, 2017 15:15:15 UTC"
+        },
+        {
+            "id": "rf17",
+            "title": "Bitacora",
+            "type": "text",
+            "alt": "",
+            "content": "Un año después, en Berlín encuentro varios ejemplares en el parque Tiergarten.",
             "src": "",
             "poster": "",
             "date": "October 01, 2018 15:15:15 UTC"
         },
         {
-            "id": "rf17",
+            "id": "rf18",
             "title": "Bitacora",
             "type": "img",
             "alt": "registro fotográfico de hongos urbanos",
@@ -181,17 +181,17 @@
             "date": "October 01, 2018 15:15:15 UTC"
         },
         {
-            "id": "rf18",
+            "id": "rf19",
             "title": "Bitacora",
             "type": "text",
             "alt": "",
-            "content": "En un terreno baldío de Madrid luego de unas copiosas lluvias descubro un grupo grande de hongos. Su color es marrón y tienen un sombrero aplanado de gran tamaño.",
+            "content": "En un terreno baldío de Madrid, luego de unas copiosas lluvias, descubro un grupo grande de hongos. Su color es marrón y tienen un sombrero aplanado de gran tamaño.",
             "src": "",
             "poster": "",
             "date": "December 06, 2018 15:15:15 UTC"
         },
         {
-            "id": "rf19",
+            "id": "rf20",
             "title": "Bitacora",
             "type": "img",
             "alt": "registro fotográfico de hongos urbanos",
@@ -201,17 +201,17 @@
             "date": "December 06, 2019 15:15:15 UTC"
         },
         {
-            "id": "rf20",
+            "id": "rf21",
             "title": "Bitacora",
             "type": "text",
             "alt": "",
-            "content": "En Bariloche encuentro algunos ejemplares pequeños. Por otro lado, en leña recientemente cortada encuentro el micelio expuesto.",
+            "content": "En Bariloche encuentro algunos ejemplares pequeños.",
             "src": "",
             "poster": "",
             "date": "January 31, 2019 15:15:15 UTC"
         },
         {
-            "id": "rf21",
+            "id": "rf22",
             "title": "Bitacora",
             "type": "img",
             "alt": "registro fotográfico de hongos urbanos",
@@ -221,17 +221,27 @@
             "date": "January 31, 2019 15:15:15 UTC"
         },
         {
-            "id": "rf22",
+            "id": "rf23",
             "title": "Bitacora",
             "type": "text",
             "alt": "",
-            "content": "En Madrid me vuelvo a encontrar ejemplares en una Avenida muy transitada.",
+            "content": "Por otro lado, en leña recientemente cortada encuentro el micelio expuesto.",
+            "src": "",
+            "poster": "",
+            "date": "January 31, 2019 15:15:15 UTC"
+        },
+        {
+            "id": "rf24",
+            "title": "Bitacora",
+            "type": "text",
+            "alt": "",
+            "content": "En Madrid me vuelvo a encontrar ejemplares en una avenida muy transitada.",
             "src": "",
             "poster": "",
             "date": "August 09, 2019 15:15:15 UTC"
         },
         {
-            "id": "rf23",
+            "id": "rf25",
             "title": "Bitacora",
             "type": "img",
             "alt": "registro fotográfico de hongos urbanos",

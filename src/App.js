@@ -13,6 +13,7 @@ import axios from "axios";
 import { URL_DB } from "./utils/path";
 
 const Container = styled.div`
+  position: relative;
   width: 100%;
   heigth: 100%;
   display: flex;
@@ -22,8 +23,7 @@ const Container = styled.div`
   background-color: ${(props) => props.theme.colors.white};
   font-family: ${(props) => props.theme.fonts[0]};
   color: ${(props) => props.theme.colors.darkgrey[0]};
-  border: solid red thin;
-  position: relative;
+
   @media (min-width: 1366px) {
     width: 60%;
     margin: 0 auto;
@@ -49,7 +49,7 @@ const App = () => {
     let titleCultivo = "";
 
     if (!data) {
-      console.log("HERE");
+      console.log("Data not available");
       return;
     } else {
       for (let key in data) {

@@ -8,7 +8,7 @@ const theme = {
   },
   fonts: ["sans-serif", "Mulish"],
   fontSizes: {
-    extrasmall: "0.8rem",
+    extrasmall: "0.7rem",
     small: "1rem",
     medium: "1.5rem",
     large: "3rem",
@@ -36,7 +36,6 @@ export const Container = styled.section`
   font-family: ${(props) => props.theme.fonts[1]};
   color: ${(props) => props.theme.colors.darkgrey};
   letter-spacing: ${(props) => props.theme.letterSpacing};
-  border: solid orange thin;
   position: relative;
   top: 10vh;
 `;
@@ -49,7 +48,6 @@ export const ContainerColumn = styled.section`
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  border: thin solid ${(props) => props.theme.testingColor};
   top: 0;
   margin: 0;
 `;

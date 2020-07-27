@@ -39,7 +39,7 @@ const TextContent = styled.p`
 const ImgContent = styled.img`
   width: 100%;
   height: auto;
-  background-color: pink;
+  background-color: #c3c3c3;
   display: flex;
   flex-direction: row;
   align-items: center;
