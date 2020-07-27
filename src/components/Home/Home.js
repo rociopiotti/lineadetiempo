@@ -1,23 +1,20 @@
 import React, { useContext } from "react";
-import Registro from "../Registro/Registro";
-import Cultivo from "../Cultivo/Cultivo";
 
 // THEME
 import { Container } from "../../theme/Theme";
 
 // CONTEXT
 import Context from "../../context/pageManager-context";
-
+import Timeline from "../Timeline/Timeline";
 
 const Home = () => {
   // Use context to get de db
   const { database } = useContext(Context);
 
-
   return (
     <Container>
-      <Registro registroAll={database[0]} />
-      <Cultivo cultivoAll={database[1]} />
+      <Timeline database={database[0]} title={database[2]} />
+      <Timeline database={database[1]} title={database[3]} />
     </Container>
   );
 };

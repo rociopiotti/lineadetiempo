@@ -45,6 +45,9 @@ const App = () => {
   const handleDatabase = () => {
     let registroAll = [];
     let cultivoAll = [];
+    let titleRegistro = "";
+    let titleCultivo = "";
+
     if (!data) {
       console.log("HERE");
       return;
@@ -52,21 +55,19 @@ const App = () => {
       for (let key in data) {
         if (key === "Registro") {
           registroAll = [...registroAll, ...data[key]];
+          titleRegistro = key;
         }
         if (key === "Cultivo") {
           cultivoAll = [...cultivoAll, ...data[key]];
+          titleCultivo = key;
         }
       }
-
-      return [registroAll, cultivoAll];
+      return [registroAll, cultivoAll, titleRegistro, titleCultivo];
     }
   };
 
-
-
- 
   return (
-    <PageManagerContext.Provider value={{ database: handleDatabase()}}>
+    <PageManagerContext.Provider value={{ database: handleDatabase() }}>
       <Theme>
         <Container>
           <Routes />
