@@ -86,8 +86,14 @@ const Cultivo = ({ cultivoAll }) => {
               type='video/mp4'
               autoplay
               loop
-              controls  
-            />
+              controls
+            >
+              <source
+                src={item.src}
+                type='video/mp4;codecs="avc1.42E01E, mp4a.40.2"'
+              />
+              Your browser does not support the video tag.
+            </VideoContent>
           </ElementContainer>
         );
         break;

@@ -38,7 +38,7 @@ const App = () => {
       const response = await axios.get(URL_DB);
       setData(response.data);
     };
-   
+
     fetchData();
   }, []);
 
@@ -62,8 +62,11 @@ const App = () => {
     }
   };
 
+
+
+ 
   return (
-    <PageManagerContext.Provider value={{ database: handleDatabase() }}>
+    <PageManagerContext.Provider value={{ database: handleDatabase()}}>
       <Theme>
         <Container>
           <Routes />

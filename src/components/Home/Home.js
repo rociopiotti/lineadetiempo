@@ -13,6 +13,7 @@ const Home = () => {
   // Use context to get de db
   const { database } = useContext(Context);
 
+
   return (
     <Container>
       <Registro registroAll={database[0]} />

@@ -3,7 +3,6 @@ import styled from "styled-components/macro";
 
 import { ContainerColumn } from "../../theme/Theme";
 
-
 const SectionHeader = styled.h2`
   width: 100%;
   font-size: ${(props) => props.theme.fontSizes.medium};
@@ -47,14 +46,14 @@ const ImgContent = styled.img`
   justify-content: center;
 `;
 
-const Registro = ({ registroAll}) => {
-
+const Registro = ({ registroAll }) => {
   const filteredElements = registroAll.filter((item, index) => {
     return item.type;
   });
 
   const item = filteredElements.map((item, index) => {
     let element;
+
     switch (item.type) {
       case "text":
         element = (
