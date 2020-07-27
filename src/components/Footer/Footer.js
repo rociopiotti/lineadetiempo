@@ -15,7 +15,6 @@ const Container = styled.footer`
   align-items: center;
   justify-content: flex-start;
   border: none;
-  border: solid blue thin;
   font-family: ${(props) => props.theme.fonts[1]};
   background-color: ${(props) => props.theme.colors.white};
   opacity:${(props) => props.theme.opacity};

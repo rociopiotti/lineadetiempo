@@ -27,7 +27,7 @@ const TextContent = styled.p`
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 2vw 2vh;
+  padding: 2vh 4vw;
   line-height: 1.5em;
   font-size: ${(props) => props.theme.fontSizes.extrasmall};
 
