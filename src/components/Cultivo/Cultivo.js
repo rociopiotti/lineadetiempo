@@ -4,12 +4,6 @@ import styled from "styled-components/macro";
 
 import { ContainerColumn } from "../../theme/Theme";
 
-// IMG
-import sampleImg from "../../images/cultivo/2017-04-24.gif";
-
-// VIDEO
-import sampleVideo from "../../images/cultivo/2017-05-01.mp4";
-
 const SectionHeader = styled.h2`
   width: 100%;
   font-size: ${(props) => props.theme.fontSizes.medium};
@@ -45,7 +39,6 @@ const TextContent = styled.p`
 const ImgContent = styled.img`
   width: 100%;
   height: auto;
-  background-color: pink;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -55,7 +48,7 @@ const ImgContent = styled.img`
 const VideoContent = styled.video`
   width: 100%;
   height: auto;
-  background-color: pink;
+  background-color: #c3c3c3;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -87,7 +80,14 @@ const Cultivo = ({ cultivoAll }) => {
       case "video":
         element = (
           <ElementContainer key={index}>
-            <VideoContent src={item.src} alt={item.alt} autoplay />
+            <VideoContent
+              src={item.src}
+              alt={item.alt}
+              autoplay
+              loop
+              controls              
+              type='video/mp4'
+            />
           </ElementContainer>
         );
         break;
