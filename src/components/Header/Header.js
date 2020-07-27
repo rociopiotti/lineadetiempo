@@ -12,17 +12,19 @@ import { Link } from "react-router-dom";
 
 const Nav = styled.nav`
   width: 100%;
-  height: 15vh;
+  height: 10vh;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
   background-color: ${(props) => props.theme.colors.white};
+  opacity:${(props) => props.theme.opacity};
   font-family: ${(props) => props.theme.fonts[1]};
   color: ${(props) => props.theme.colors.darkgrey};
   letter-spacing: ${(props) => props.theme.letterSpacing};
   border: solid green thin;
   position:fixed;
+  z-index:2;
   top:0;
 `;
 

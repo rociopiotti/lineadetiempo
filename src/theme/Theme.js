@@ -15,6 +15,7 @@ const theme = {
   },
   letterSpacing: "0.1rem",
   sideMargin: "5vw",
+  opacity: "0.8",
 
   // -------------------> TESTING PROPERTIES <------------------- //
   testingColor: "lightgreen",
