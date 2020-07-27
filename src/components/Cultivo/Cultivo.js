@@ -83,10 +83,10 @@ const Cultivo = ({ cultivoAll }) => {
             <VideoContent
               src={item.src}
               alt={item.alt}
+              type='video/mp4'
               autoplay
               loop
-              controls              
-              type='video/mp4'
+              controls  
             />
           </ElementContainer>
         );
