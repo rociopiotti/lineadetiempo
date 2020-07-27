@@ -38,7 +38,7 @@ export const Container = styled.section`
   letter-spacing: ${(props) => props.theme.letterSpacing};
   border: solid orange thin;
   position: relative;
-  top: 15vh;
+  top: 10vh;
 `;
 
 export const ContainerColumn = styled.section`

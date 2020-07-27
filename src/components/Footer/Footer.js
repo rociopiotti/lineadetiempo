@@ -9,15 +9,17 @@ const Container = styled.footer`
   position: fixed;
   bottom: 0;
   width: 100%;
-  height: 15vh;
+  height: 10vh;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
-  background-color: transparent;
   border: none;
   border: solid blue thin;
   font-family: ${(props) => props.theme.fonts[1]};
+  background-color: ${(props) => props.theme.colors.white};
+  opacity:${(props) => props.theme.opacity};
+
 `;
 
 const SocialMenu = styled.ul`
