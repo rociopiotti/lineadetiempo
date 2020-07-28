@@ -56,27 +56,27 @@ const VideoContent = styled.video`
   justify-content: center;
 `;
 
-const Timeline = ({ database, title }) => {
+const Timeline = ({ database, title, onClickElement }) => {
   const renderElement = database.map((item, index) => {
     let element;
     switch (item.type) {
       case "text":
         element = (
-          <ElementContainer key={index}>
+          <ElementContainer key={index} onClick = {()=> onClickElement(item.id)}>
             <TextContent>{item.content}</TextContent>
           </ElementContainer>
         );
         break;
       case "img":
         element = (
-          <ElementContainer key={index}>
+          <ElementContainer key={index} onClick = {()=> onClickElement(item.id)}>
             <ImgContent src={item.src} alt={item.alt} />
           </ElementContainer>
         );
         break;
       case "video":
         element = (
-          <ElementContainer key={index}>
+          <ElementContainer key={index} onClick = {()=> onClickElement(item.id)}>
             <VideoContent
               src={item.src}
               alt={item.alt}
@@ -101,7 +101,7 @@ const Timeline = ({ database, title }) => {
   });
 
   return (
-    <ContainerColumn>
+    <ContainerColumn >
       <SectionHeader>{title}</SectionHeader>
       {renderElement}
     </ContainerColumn>
