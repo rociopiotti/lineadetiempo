@@ -62,21 +62,21 @@ const Timeline = ({ database, title, onClickElement }) => {
     switch (item.type) {
       case "text":
         element = (
-          <ElementContainer key={index} onClick = {()=> onClickElement(item.id)}>
+          <ElementContainer key={index}>
             <TextContent>{item.content}</TextContent>
           </ElementContainer>
         );
         break;
       case "img":
         element = (
-          <ElementContainer key={index} onClick = {()=> onClickElement(item.id)}>
+          <ElementContainer key={index} onClick={() => onClickElement(item.id)}>
             <ImgContent src={item.src} alt={item.alt} />
           </ElementContainer>
         );
         break;
       case "video":
         element = (
-          <ElementContainer key={index} onClick = {()=> onClickElement(item.id)}>
+          <ElementContainer key={index}>
             <VideoContent
               src={item.src}
               alt={item.alt}
@@ -101,7 +101,7 @@ const Timeline = ({ database, title, onClickElement }) => {
   });
 
   return (
-    <ContainerColumn >
+    <ContainerColumn>
       <SectionHeader>{title}</SectionHeader>
       {renderElement}
     </ContainerColumn>

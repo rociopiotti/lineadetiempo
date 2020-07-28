@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Routes from "./router/Routes";
 import Theme from "./theme/Theme";
 import styled from "styled-components/macro";
@@ -12,6 +12,9 @@ import axios from "axios";
 // DATABASE PATH
 import { URL_DB } from "./utils/path";
 import Zoom from "./components/Zoom/Zoom";
+
+//NO SCROLL
+import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock";
 
 const Container = styled.div`
   position: relative;
@@ -33,7 +36,13 @@ const Container = styled.div`
 
 const App = () => {
   const [data, setData] = useState([]);
-  /// MODAL {active, scr,}
+  const [modal, setModal] = useState({
+    active: false,
+    src: "",
+  });
+  const [dictionary, setDictionary] = useState({});
+
+  const targetElement = useRef();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -43,6 +52,32 @@ const App = () => {
 
     fetchData();
   }, []);
+
+  useEffect(() => {
+    if (data.length === 0) {
+      return;
+    }
+
+    const all = [...data.Cultivo, ...data.Registro];
+    const SRC_DICTIONARY = {};
+
+    all.forEach((element) => {
+      if (element.src === " ") {
+        return;
+      } else {
+        SRC_DICTIONARY[element.id] = element.src;
+      }
+    });
+
+    setDictionary(SRC_DICTIONARY);
+  }, [data]);
+
+  // const handleDb = useCallback(
+  //   () => {
+  //     callback
+  //   },
+  //   [input],
+  // )
 
   const handleDatabase = () => {
     let registroAll = [];
@@ -64,19 +99,45 @@ const App = () => {
           titleCultivo = key;
         }
       }
+
       return [registroAll, cultivoAll, titleRegistro, titleCultivo];
     }
   };
 
   const onClickElement = (itemId) => {
-    console.log(itemId);
+    if (modal.active === false) {
+      setModal({
+        active: true,
+
+        src: dictionary[itemId],
+      });
+    } else {
+      setModal({
+        active: false,
+      });
+    }
+  };
+
+  const showModal = () => {
+    if (modal.active === false) {
+      return;
+    } else {
+      return (
+        <Zoom
+          modal={modal}
+          setModal={setModal}
+          onClickElement={onClickElement}
+        />
+      );
+    }
   };
 
   return (
     <PageManagerContext.Provider
       value={{ database: handleDatabase(), onClickElement: onClickElement }}>
       <Theme>
-        <Zoom />
+        {showModal()}
+
         <Container>
           <Routes />
         </Container>
