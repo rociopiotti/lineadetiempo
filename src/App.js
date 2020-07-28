@@ -120,8 +120,13 @@ const App = () => {
 
   const showModal = () => {
     if (modal.active === false) {
+      document.body.style.position = 'relative';
+
       return;
     } else {
+      window.scrollTo(0, 0);
+      document.body.style.position = 'fixed';
+
       return (
         <Zoom
           modal={modal}

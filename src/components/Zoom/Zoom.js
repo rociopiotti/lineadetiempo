@@ -54,7 +54,7 @@ const CloseBtn = styled.button`
 
 const Zoom = ({ modal }) => {
   const { database, onClickElement } = useContext(Context);
-  console.log(modal.src)
+ 
   
   return (
     <Wrapper >
