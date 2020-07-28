@@ -8,6 +8,7 @@ import {
   faBehance,
 } from "@fortawesome/free-brands-svg-icons";
 
+import { faTimes } from "@fortawesome/free-solid-svg-icons";
 
 const Icons = (props) => {
   // DEFINIR ICONS:
@@ -22,12 +23,14 @@ const Icons = (props) => {
     case "behance":
       faIcon = faBehance;
       break;
-
+    case "close":
+      faIcon = faTimes;
+      break;
     default:
       faIcon = null;
       break;
   }
-  return <FontAwesomeIcon icon={faIcon} size="sm" />;
+  return <FontAwesomeIcon icon={faIcon} size='sm' />;
 };
 
 export default Icons;

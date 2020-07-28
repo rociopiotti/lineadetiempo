@@ -1,4 +1,4 @@
-import React, { useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import Routes from "./router/Routes";
 import Theme from "./theme/Theme";
 import styled from "styled-components/macro";
@@ -11,6 +11,7 @@ import axios from "axios";
 
 // DATABASE PATH
 import { URL_DB } from "./utils/path";
+import Zoom from "./components/Zoom/Zoom";
 
 const Container = styled.div`
   position: relative;
@@ -32,6 +33,7 @@ const Container = styled.div`
 
 const App = () => {
   const [data, setData] = useState([]);
+  /// MODAL {active, scr,}
 
   useEffect(() => {
     const fetchData = async () => {
@@ -67,12 +69,14 @@ const App = () => {
   };
 
   const onClickElement = (itemId) => {
-   console.log(itemId)
+    console.log(itemId);
   };
 
   return (
-    <PageManagerContext.Provider value={{ database: handleDatabase(), onClickElement: onClickElement }}>
+    <PageManagerContext.Provider
+      value={{ database: handleDatabase(), onClickElement: onClickElement }}>
       <Theme>
+        <Zoom />
         <Container>
           <Routes />
         </Container>
