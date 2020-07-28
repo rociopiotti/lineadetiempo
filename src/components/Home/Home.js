@@ -5,6 +5,7 @@ import { Container } from "../../theme/Theme";
 
 // CONTEXT
 import Context from "../../context/pageManager-context";
+
 import Timeline from "../Timeline/Timeline";
 
 const Home = () => {

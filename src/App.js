@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Routes from "./router/Routes";
 import Theme from "./theme/Theme";
 import styled from "styled-components/macro";
@@ -11,6 +11,9 @@ import axios from "axios";
 
 // DATABASE PATH
 import { URL_DB } from "./utils/path";
+
+//NO SCROLL
+import { disableBodyScroll } from "body-scroll-lock";
 
 const Container = styled.div`
   position: relative;
@@ -32,6 +35,8 @@ const Container = styled.div`
 
 const App = () => {
   const [data, setData] = useState([]);
+
+  const targetElement = useRef();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -66,10 +71,17 @@ const App = () => {
     }
   };
 
+ 
+  // useEffect(() => {
+  //   disableBodyScroll(targetElement.current);
+  // }, []);
+
+
   return (
-    <PageManagerContext.Provider value={{ database: handleDatabase() }}>
+    <PageManagerContext.Provider
+      value={{ database: handleDatabase()}}>
       <Theme>
-        <Container>
+        <Container  ref={targetElement}>
           <Routes />
         </Container>
       </Theme>

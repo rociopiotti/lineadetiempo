@@ -49,7 +49,7 @@ export const ContainerColumn = styled.section`
   align-items: flex-start;
   justify-content: center;
   top: 0;
-  margin: 0;
+  margin: 0 1vw;
 `;
 
 

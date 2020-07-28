@@ -101,7 +101,7 @@ const Timeline = ({ database, title }) => {
   });
 
   return (
-    <ContainerColumn theme={{ testingColor: "coral" }}>
+    <ContainerColumn>
       <SectionHeader>{title}</SectionHeader>
       {renderElement}
     </ContainerColumn>

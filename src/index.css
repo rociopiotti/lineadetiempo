@@ -5,9 +5,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* overflow: hidden; */
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none; 
+  /* overflow: hidden; */
 }
 body::-webkit-scrollbar {
   display: none;
