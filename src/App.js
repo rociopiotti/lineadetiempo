@@ -120,12 +120,16 @@ const App = () => {
 
   const showModal = () => {
     if (modal.active === false) {
-      document.body.style.position = 'relative';
+      document.body.style.position = "relative";
 
-      return;
+      return (
+        <Container>
+          <Routes />
+        </Container>
+      );
     } else {
       window.scrollTo(0, 0);
-      document.body.style.position = 'fixed';
+      document.body.style.position = "fixed";
 
       return (
         <Zoom
@@ -140,13 +144,7 @@ const App = () => {
   return (
     <PageManagerContext.Provider
       value={{ database: handleDatabase(), onClickElement: onClickElement }}>
-      <Theme>
-        {showModal()}
-
-        <Container>
-          <Routes />
-        </Container>
-      </Theme>
+      <Theme>{showModal()}</Theme>
     </PageManagerContext.Provider>
   );
 };
