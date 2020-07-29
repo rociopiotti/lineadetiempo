@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import Routes from "./router/Routes";
 import Theme from "./theme/Theme";
 import styled from "styled-components/macro";
@@ -13,8 +13,7 @@ import axios from "axios";
 import { URL_DB } from "./utils/path";
 import Zoom from "./components/Zoom/Zoom";
 
-//NO SCROLL
-import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock";
+import useScroll from "./utils/useScroll";
 
 const Container = styled.div`
   position: relative;
@@ -41,8 +40,9 @@ const App = () => {
     src: "",
   });
   const [dictionary, setDictionary] = useState({});
+  const [registro, setRegistro] = useState([]);
+  const [cultivo, setCultivo] = useState([]);
 
-  const targetElement = useRef();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -56,53 +56,25 @@ const App = () => {
   useEffect(() => {
     if (data.length === 0) {
       return;
-    }
-
-    const all = [...data.Cultivo, ...data.Registro];
-    const SRC_DICTIONARY = {};
-
-    all.forEach((element) => {
-      if (element.src === " ") {
-        return;
-      } else {
-        SRC_DICTIONARY[element.id] = element.src;
-      }
-    });
-
-    setDictionary(SRC_DICTIONARY);
-  }, [data]);
-
-  // const handleDb = useCallback(
-  //   () => {
-  //     callback
-  //   },
-  //   [input],
-  // )
-
-  const handleDatabase = () => {
-    let registroAll = [];
-    let cultivoAll = [];
-    let titleRegistro = "";
-    let titleCultivo = "";
-
-    if (!data) {
-      console.log("Data not available");
-      return;
     } else {
-      for (let key in data) {
-        if (key === "Registro") {
-          registroAll = [...registroAll, ...data[key]];
-          titleRegistro = key;
-        }
-        if (key === "Cultivo") {
-          cultivoAll = [...cultivoAll, ...data[key]];
-          titleCultivo = key;
-        }
-      }
+      const all = [...data.Cultivo, ...data.Registro];
+      const cultivo = [...data.Cultivo];
+      const registro = [...data.Registro];
 
-      return [registroAll, cultivoAll, titleRegistro, titleCultivo];
+      const SRC_DICTIONARY = {};
+
+      all.forEach((element) => {
+        if (element.src === " ") {
+          return;
+        } else {
+          SRC_DICTIONARY[element.id] = element.src;
+        }
+      });
+      setRegistro(registro);
+      setCultivo(cultivo);
+      setDictionary(SRC_DICTIONARY);
     }
-  };
+  }, [data]);
 
   const onClickElement = (itemId) => {
     if (modal.active === false) {
@@ -120,16 +92,14 @@ const App = () => {
 
   const showModal = () => {
     if (modal.active === false) {
-      document.body.style.position = "relative";
-
+      // document.body.style.position = "relative";
       return (
         <Container>
           <Routes />
         </Container>
       );
     } else {
-      window.scrollTo(0, 0);
-      document.body.style.position = "fixed";
+      // document.body.style.position = "fixed";
 
       return (
         <Zoom
@@ -141,9 +111,16 @@ const App = () => {
     }
   };
 
+  useScroll(modal.active);
   return (
     <PageManagerContext.Provider
-      value={{ database: handleDatabase(), onClickElement: onClickElement }}>
+      value={{
+        onClickElement: onClickElement,
+        dataCultivo: cultivo,
+        dataRegistro: registro,
+        titleRegistro: "Registro",
+        titleCultivo: "Cultivo",
+      }}>
       <Theme>{showModal()}</Theme>
     </PageManagerContext.Provider>
   );
