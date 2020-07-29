@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useState, useEffect } from "react";
 import Routes from "./router/Routes";
 import Theme from "./theme/Theme";
 import styled from "styled-components/macro";
@@ -57,7 +57,24 @@ const App = () => {
     if (data.length === 0) {
       return;
     } else {
-      handleDatabase();
+      const all = [...data.Cultivo, ...data.Registro];
+
+      const SRC_DICTIONARY = {};
+
+      all.forEach((element) => {
+        if (element.src === " ") {
+          return;
+        } else {
+          SRC_DICTIONARY[element.id] = element.src;
+        }
+      });
+
+      const cultivo = [...data.Cultivo];
+      const registro = [...data.Registro];
+
+      setDictionary(SRC_DICTIONARY);
+      setRegistro(registro);
+      setCultivo(cultivo);
     }
   }, [data]);
 
@@ -74,28 +91,6 @@ const App = () => {
       });
     }
   };
-
-  /// HANDLES DATABASE
-  const handleDatabase = useCallback(() => {
-    const all = [...data.Cultivo, ...data.Registro];
-
-    const SRC_DICTIONARY = {};
-
-    all.forEach((element) => {
-      if (element.src === " ") {
-        return;
-      } else {
-        SRC_DICTIONARY[element.id] = element.src;
-      }
-    });
-
-    const cultivo = [...data.Cultivo];
-    const registro = [...data.Registro];
-
-    setDictionary(SRC_DICTIONARY);
-    setRegistro(registro);
-    setCultivo(cultivo);
-  }, [data]);
 
   /// SHOW MODAL
   const showModal = () => {
