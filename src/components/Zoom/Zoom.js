@@ -7,7 +7,7 @@ import Icon from "../Icon/Icon";
 import Context from "../../context/pageManager-context";
 
 const Wrapper = styled.div`
-  position: absolute;
+  position: fixed;
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -56,16 +56,17 @@ const CloseBtn = styled.button`
   }
 `;
 
-const Zoom = ({ modal }) => {
-  const { onClickElement } = useContext(Context);
+const Zoom = () => {
+  const { onClickElement, modal } = useContext(Context);
 
+  const { src } = modal;
   return (
     <Wrapper onClick={onClickElement}>
       <ElementContainer>
         <CloseBtn onClick={onClickElement}>
           <Icon type='close' />
         </CloseBtn>
-        <ImgContent src={modal.src} />
+        <ImgContent src={src} />
       </ElementContainer>
     </Wrapper>
   );

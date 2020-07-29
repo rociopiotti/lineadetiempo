@@ -11,9 +11,8 @@ import axios from "axios";
 
 // DATABASE PATH
 import { URL_DB } from "./utils/path";
-import Zoom from "./components/Zoom/Zoom";
 
-import useScroll from "./utils/useScroll";
+import Zoom from "./components/Zoom/Zoom";
 
 const Container = styled.div`
   position: relative;
@@ -43,7 +42,7 @@ const App = () => {
   const [registro, setRegistro] = useState([]);
   const [cultivo, setCultivo] = useState([]);
 
-
+  /// FETCH DATA
   useEffect(() => {
     const fetchData = async () => {
       const response = await axios.get(URL_DB);
@@ -53,34 +52,20 @@ const App = () => {
     fetchData();
   }, []);
 
+  /// RUNS HANDLEDATABASE
   useEffect(() => {
     if (data.length === 0) {
       return;
     } else {
-      const all = [...data.Cultivo, ...data.Registro];
-      const cultivo = [...data.Cultivo];
-      const registro = [...data.Registro];
-
-      const SRC_DICTIONARY = {};
-
-      all.forEach((element) => {
-        if (element.src === " ") {
-          return;
-        } else {
-          SRC_DICTIONARY[element.id] = element.src;
-        }
-      });
-      setRegistro(registro);
-      setCultivo(cultivo);
-      setDictionary(SRC_DICTIONARY);
+      handleDatabase();
     }
   }, [data]);
 
+  /// SETS MODAL STATE WHEN ELEMENT IS CLICKED
   const onClickElement = (itemId) => {
     if (modal.active === false) {
       setModal({
         active: true,
-
         src: dictionary[itemId],
       });
     } else {
@@ -90,28 +75,39 @@ const App = () => {
     }
   };
 
+  /// HANDLES DATABASE
+  const handleDatabase = useCallback(() => {
+    const all = [...data.Cultivo, ...data.Registro];
+
+    const SRC_DICTIONARY = {};
+
+    all.forEach((element) => {
+      if (element.src === " ") {
+        return;
+      } else {
+        SRC_DICTIONARY[element.id] = element.src;
+      }
+    });
+
+    const cultivo = [...data.Cultivo];
+    const registro = [...data.Registro];
+
+    setDictionary(SRC_DICTIONARY);
+    setRegistro(registro);
+    setCultivo(cultivo);
+  }, [data]);
+
+  /// SHOW MODAL
   const showModal = () => {
     if (modal.active === false) {
-      // document.body.style.position = "relative";
-      return (
-        <Container>
-          <Routes />
-        </Container>
-      );
+      document.body.style.overflowY = "unset";
+      return;
     } else {
-      // document.body.style.position = "fixed";
-
-      return (
-        <Zoom
-          modal={modal}
-          setModal={setModal}
-          onClickElement={onClickElement}
-        />
-      );
+      document.body.style.overflowY = "hidden";
+      return <Zoom />;
     }
   };
 
-  useScroll(modal.active);
   return (
     <PageManagerContext.Provider
       value={{
@@ -120,8 +116,14 @@ const App = () => {
         dataRegistro: registro,
         titleRegistro: "Registro",
         titleCultivo: "Cultivo",
+        modal: modal,
       }}>
-      <Theme>{showModal()}</Theme>
+      <Theme>
+        {showModal()}
+        <Container>
+          <Routes />
+        </Container>
+      </Theme>
     </PageManagerContext.Provider>
   );
 };
