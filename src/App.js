@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from "react";
 import Routes from "./router/Routes";
 import Theme from "./theme/Theme";
+import Zoom from "./components/Zoom/Zoom";
+
+// STYLED
 import styled from "styled-components/macro";
 
 // CONTEXT
@@ -11,8 +14,6 @@ import axios from "axios";
 
 // DATABASE PATH
 import { URL_DB } from "./utils/path";
-
-import Zoom from "./components/Zoom/Zoom";
 
 const Container = styled.div`
   position: relative;
@@ -80,27 +81,22 @@ const App = () => {
 
   /// SETS MODAL STATE WHEN ELEMENT IS CLICKED
   const onClickElement = (itemId) => {
-    if (modal.active === false) {
+    const { active } = modal;
+
+    if (!active) {
       setModal({
         active: true,
         src: dictionary[itemId],
       });
     } else {
-      setModal({
-        active: false,
-      });
     }
   };
 
-  /// SHOW MODAL
-  const showModal = () => {
-    if (modal.active === false) {
-      document.body.style.overflowY = "unset";
-      return;
-    } else {
-      document.body.style.overflowY = "hidden";
-      return <Zoom />;
-    }
+  const handleZoomClose = () => {
+    setModal({
+      ...modal,
+      active: false,
+    });
   };
 
   return (
@@ -114,7 +110,7 @@ const App = () => {
         modal: modal,
       }}>
       <Theme>
-        {showModal()}
+        <Zoom active={modal.active} src={modal.src} onClose={handleZoomClose} />
         <Container>
           <Routes />
         </Container>

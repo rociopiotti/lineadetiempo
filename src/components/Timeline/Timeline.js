@@ -97,6 +97,7 @@ const Timeline = ({ database, title, onClickElement }) => {
         element = null;
         break;
     }
+
     return element;
   });
 

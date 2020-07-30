@@ -1,22 +1,25 @@
-import React, { useContext } from "react";
+import React, { useEffect, useRef } from "react";
 
 import styled from "styled-components/macro";
 
 import Icon from "../Icon/Icon";
-// CONTEXT
-import Context from "../../context/pageManager-context";
+
+// ANIMATION:
+import { gsap } from "gsap";
+import { Timeline } from "gsap/gsap-core";
 
 const Wrapper = styled.div`
   position: fixed;
   width: 100vw;
   height: 100vh;
-  display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   background-color: rgba(0, 0, 0, 0.8);
   font-family: ${(props) => props.theme.fonts[0]};
   color: ${(props) => props.theme.colors.darkgrey[0]};
+  display: none;
+  opacity: 0;
   z-index: 3;
   &:focus {
     outline: none;
@@ -56,14 +59,25 @@ const CloseBtn = styled.button`
   }
 `;
 
-const Zoom = () => {
-  const { onClickElement, modal } = useContext(Context);
+const Zoom = ({ active, src, onClose }) => {
+  const wrapperRef = useRef();
 
-  const { src } = modal;
+  useEffect(() => {
+    document.body.style.overflowY = active === true ? "hidden" : "unset";
+
+    const tl = new Timeline({});
+
+    const duration = 0.5;
+    const opacity = active === true ? 1 : 0;
+    const display = active === true ? "flex" : "none";
+
+    tl.to(wrapperRef.current, duration, { opacity, display });
+  }, [active]);
+
   return (
-    <Wrapper onClick={onClickElement}>
+    <Wrapper onClick={onClose} ref={wrapperRef}>
       <ElementContainer>
-        <CloseBtn onClick={onClickElement}>
+        <CloseBtn onClick={onClose}>
           <Icon type='close' />
         </CloseBtn>
         <ImgContent src={src} />
