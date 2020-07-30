@@ -38,13 +38,16 @@ const ElementContainer = styled.div`
 `;
 
 const ImgContent = styled.img`
-  width: 50vw;
+  width: 70vw;
   height: auto;
   background-color: #c3c3c3;
+  @media (min-width: 768px) {
+    width: 50vw;
+  }
 `;
 
 const CloseBtn = styled.button`
-  width: 50vw;
+  width: 70vw;
   color: #ffffff;
   background-color: transparent;
   border: none;
@@ -56,6 +59,9 @@ const CloseBtn = styled.button`
   font-size: ${(props) => props.theme.fontSizes.small};
   &:focus {
     outline: none;
+  }
+  @media (min-width: 768px) {
+    width: 50vw;
   }
 `;
 

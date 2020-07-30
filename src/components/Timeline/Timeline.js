@@ -46,16 +46,6 @@ const ImgContent = styled.img`
   justify-content: center;
 `;
 
-const VideoContent = styled.video`
-  width: 100%;
-  height: auto;
-  background-color: #c3c3c3;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-`;
-
 const Timeline = ({ database, title, onClickElement }) => {
   const renderElement = database.map((item, index) => {
     let element;
@@ -71,25 +61,6 @@ const Timeline = ({ database, title, onClickElement }) => {
         element = (
           <ElementContainer key={index} onClick={() => onClickElement(item.id)}>
             <ImgContent src={item.src} alt={item.alt} />
-          </ElementContainer>
-        );
-        break;
-      case "video":
-        element = (
-          <ElementContainer key={index}>
-            <VideoContent
-              src={item.src}
-              alt={item.alt}
-              type='video/mp4'
-              autoplay
-              loop
-              controls>
-              <source
-                src={item.src}
-                type='video/mp4;codecs="avc1.42E01E, mp4a.40.2"'
-              />
-              Your browser does not support the video tag.
-            </VideoContent>
           </ElementContainer>
         );
         break;
