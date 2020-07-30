@@ -52,7 +52,7 @@ const App = () => {
     fetchData();
   }, []);
 
-  /// RUNS HANDLEDATABASE
+  /// HANDLES DATABASE
   useEffect(() => {
     if (data.length === 0) {
       return;
