@@ -91,8 +91,6 @@ const App = () => {
     } else {
     }
 
-    console.log("src", dictionary[itemId]);
-    console.log("itemId", itemId);
   };
 
   const handleZoomClose = () => {

@@ -79,6 +79,7 @@ const Zoom = ({ active, src, onClose }) => {
       ? disableBodyScroll(wrapperRef.current)
       : clearAllBodyScrollLocks();
   };
+
   useEffect(() => {
     BlockScroll();
 
@@ -90,7 +91,7 @@ const Zoom = ({ active, src, onClose }) => {
 
     tl.to(wrapperRef.current, duration, { opacity, display, ease: ease });
   }, [active]);
-
+  
   return (
     <Wrapper onClick={onClose} ref={wrapperRef}>
       <ElementContainer>
