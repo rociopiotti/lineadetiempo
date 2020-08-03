@@ -5,7 +5,7 @@ import styled from "styled-components/macro";
 import Icon from "../Icon/Icon";
 
 // ANIMATION:
-import { gsap } from "gsap";
+// import { gsap } from "gsap";
 import { Timeline } from "gsap/gsap-core";
 
 const Wrapper = styled.div`
