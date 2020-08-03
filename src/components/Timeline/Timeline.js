@@ -44,6 +44,7 @@ const ImgContent = styled.img`
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  cursor:pointer;
 `;
 
 const Timeline = ({ database, title, onClickElement }) => {

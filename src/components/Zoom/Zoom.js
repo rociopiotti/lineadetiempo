@@ -57,6 +57,7 @@ const CloseBtn = styled.button`
   justify-content: flex-end;
   padding: 1vw;
   font-size: ${(props) => props.theme.fontSizes.small};
+  cursor:pointer;
   &:focus {
     outline: none;
   }
