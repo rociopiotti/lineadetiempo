@@ -15,6 +15,9 @@ import axios from "axios";
 // DATABASE PATH
 import { URL_DB } from "./utils/path";
 
+
+import { Helmet } from 'react-helmet';
+
 const Container = styled.div`
   position: relative;
   width: 100%;
@@ -90,7 +93,6 @@ const App = () => {
       });
     } else {
     }
-
   };
 
   const handleZoomClose = () => {
@@ -111,6 +113,13 @@ const App = () => {
         modal: modal,
       }}>
       <Theme>
+        <Helmet>
+          <title>Linea de tiempo</title>
+          <meta
+            name='description'
+            content='Linea de tiempo para Proyecto fungi 2020'
+          />
+        </Helmet>
         <Zoom active={modal.active} src={modal.src} onClose={handleZoomClose} />
         <Container>
           <Routes />

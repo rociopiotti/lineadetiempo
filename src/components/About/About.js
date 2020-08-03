@@ -1,12 +1,12 @@
-import React, {useEffect} from "react";
+import React, { useEffect } from "react";
 
 import { Container } from "../../theme/Theme";
 import styled from "styled-components";
 
+import { Helmet } from "react-helmet";
 const ContainerModify = styled(Container)`
   flex-direction: column;
   align-items: center;
-
 `;
 
 const SectionContainer = styled.section`
@@ -42,11 +42,17 @@ const SectionContent = styled.p`
 
 const About = () => {
   useEffect(() => {
-    window.scrollTo(0,0)
-
+    window.scrollTo(0, 0);
   }, []);
   return (
     <ContainerModify>
+      <Helmet>
+        <title>About</title>
+        <meta
+          name='description'
+          content='About Linea de tiempo'
+        />
+      </Helmet>
       <SectionContainer>
         <SectionHeader>Linea de tiempo</SectionHeader>
         <SeparationLine />

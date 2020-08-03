@@ -12,12 +12,11 @@ import Header from "../components/Header/Header";
 import About from "../components/About/About";
 import Footer from "../components/Footer/Footer";
 import Home from "../components/Home/Home";
-
 const Routes = () => {
   return (
     <PageManagerContext.Consumer>
       {(context) => (
-        <BrowserRouter basename='/'>
+        <BrowserRouter basename="/public/webdesign/lineadetiempo">
           <Header />
           <Switch>
             <Route path='/about' component={About} />
