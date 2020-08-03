@@ -8,7 +8,7 @@ import { Space } from "../../theme/Theme";
 import logo from "../../images/icons/Faviconfavicon.svg";
 
 // ROUTER
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const Nav = styled.nav`
   position: fixed;
@@ -34,7 +34,7 @@ const LogoImg = styled.img`
   margin-left: ${(props) => props.theme.sideMargin};
 `;
 
-const MenuLink = styled(Link)`
+const MenuLink = styled(NavLink)`
   text-decoration: none;
   font-size: ${(props) => props.theme.fontSizes.extrasmall};
   margin-right: ${(props) => props.theme.sideMargin};
@@ -47,9 +47,9 @@ const MenuLink = styled(Link)`
 const Header = () => {
   return (
     <Nav>
-      <Link to='/'>
+      <NavLink to='/'>
         <LogoImg src={logo} alt='Logo' />
-      </Link>
+      </NavLink>
       <Space />
       <MenuLink to='/about'>About</MenuLink>
     </Nav>
