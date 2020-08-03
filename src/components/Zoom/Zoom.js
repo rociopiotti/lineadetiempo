@@ -7,8 +7,9 @@ import Icon from "../Icon/Icon";
 import { disableBodyScroll, clearAllBodyScrollLocks } from "body-scroll-lock";
 
 // ANIMATION:
-import { gsap } from "gsap";
+import { gsap, CSSPlugin } from "gsap/all";
 import { Timeline, Power2 } from "gsap/gsap-core";
+gsap.registerPlugin(CSSPlugin);   
 
 // EASING
 const ease = Power2.easeInOut;
