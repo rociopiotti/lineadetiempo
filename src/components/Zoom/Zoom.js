@@ -7,9 +7,9 @@ import Icon from "../Icon/Icon";
 import { disableBodyScroll, clearAllBodyScrollLocks } from "body-scroll-lock";
 
 // ANIMATION:
+import { gsap } from "gsap";
 import { Timeline, Power2 } from "gsap/gsap-core";
-import { gsap, CSSPlugin } from "gsap/all";
-gsap.registerPlugin(CSSPlugin);
+
 // EASING
 const ease = Power2.easeInOut;
 
@@ -100,9 +100,7 @@ const Zoom = ({ active, src, onClose }) => {
         <CloseBtn onClick={onClose}>
           <Icon type='close' />
         </CloseBtn>
-        <ImgContent
-          src={`https://www.rociopiotti.com/public/webdesign/lineadetiempo/${src}`}
-        />
+        <ImgContent src={src} />
       </ElementContainer>
     </Wrapper>
   );

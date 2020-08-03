@@ -13,6 +13,7 @@
     "@testing-library/user-event": "^7.2.1",
     "axios": "^0.19.2",
     "body-scroll-lock": "^3.0.3",
+    "cors": "^2.8.5",
     "gsap": "^3.4.2",
     "react": "^16.13.1",
     "react-device-detect": "^1.13.1",
