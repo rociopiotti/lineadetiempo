@@ -1,5 +1,7 @@
 
-export const URL_DB = "/lineadetiempo/database.json";
+export const URL_DB = "https://www.rociopiotti.com/public/webdesign/lineadetiempo/database.php";
+
+
 
 
 
