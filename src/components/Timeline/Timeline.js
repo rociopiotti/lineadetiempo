@@ -17,6 +17,7 @@ const ElementContainer = styled.div`
   align-items: center;
   justify-content: center;
   margin-bottom: 10vh;
+  -webkit-tap-highlight-color: transparent;
 `;
 
 const TextContent = styled.p`
@@ -44,7 +45,8 @@ const ImgContent = styled.img`
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  cursor:pointer;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
 `;
 
 const Timeline = ({ database, title, onClickElement }) => {

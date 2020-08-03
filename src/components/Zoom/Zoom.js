@@ -4,9 +4,17 @@ import styled from "styled-components/macro";
 
 import Icon from "../Icon/Icon";
 
+import {
+  disableBodyScroll,
+  clearAllBodyScrollLocks,
+} from "body-scroll-lock";
+
 // ANIMATION:
-// import { gsap } from "gsap";
-import { Timeline } from "gsap/gsap-core";
+import { gsap } from "gsap";
+import { Timeline, Power2 } from "gsap/gsap-core";
+
+// EASING
+const ease = Power2.easeInOut;
 
 const Wrapper = styled.div`
   position: fixed;
@@ -41,7 +49,7 @@ const ImgContent = styled.img`
   width: 70vw;
   height: auto;
   background-color: #c3c3c3;
-  @media (min-width: 768px) {
+  @media (min-width: 1366px) {
     width: 50vw;
   }
 `;
@@ -57,11 +65,11 @@ const CloseBtn = styled.button`
   justify-content: flex-end;
   padding: 1vw;
   font-size: ${(props) => props.theme.fontSizes.small};
-  cursor:pointer;
+  cursor: pointer;
   &:focus {
     outline: none;
   }
-  @media (min-width: 768px) {
+  @media (min-width: 1366px) {
     width: 50vw;
   }
 `;
@@ -70,7 +78,10 @@ const Zoom = ({ active, src, onClose }) => {
   const wrapperRef = useRef();
 
   useEffect(() => {
-    document.body.style.overflowY = active === true ? "hidden" : "unset";
+    const blockScroll =
+      active === true
+        ? disableBodyScroll(wrapperRef.current)
+        : clearAllBodyScrollLocks();
 
     const tl = new Timeline({});
 
@@ -78,7 +89,7 @@ const Zoom = ({ active, src, onClose }) => {
     const opacity = active === true ? 1 : 0;
     const display = active === true ? "flex" : "none";
 
-    tl.to(wrapperRef.current, duration, { opacity, display });
+    tl.to(wrapperRef.current, duration, { opacity, display, ease: ease });
   }, [active]);
 
   return (
