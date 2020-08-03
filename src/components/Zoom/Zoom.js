@@ -60,14 +60,16 @@ const CloseBtn = styled.button`
   flex-direction: row;
   align-items: center;
   justify-content: flex-end;
-  padding: 1vw;
-  font-size: ${(props) => props.theme.fontSizes.small};
+  padding: 2.5vw 0;
+  font-size: ${(props) => props.theme.fontSizes.extrasmall};
   cursor: pointer;
   &:focus {
     outline: none;
   }
   @media (min-width: 1366px) {
     width: 50vw;
+    padding: 1vw 0;
+    font-size: ${(props) => props.theme.fontSizes.small};
   }
 `;
 
@@ -91,7 +93,7 @@ const Zoom = ({ active, src, onClose }) => {
 
     tl.to(wrapperRef.current, duration, { opacity, display, ease: ease });
   }, [active]);
-  
+
   return (
     <Wrapper onClick={onClose} ref={wrapperRef}>
       <ElementContainer>

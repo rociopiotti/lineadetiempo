@@ -138,15 +138,6 @@
         {
             "id": "rf15",
             "title": "Bitacora",
-            "type": "img",
-            "alt": "registro fotográfico de hongos urbanos",
-            "content": "",
-            "src": "/images/registroFotografico/2017-05-05.gif",
-            "date": "May 05, 2017 15:15:15 UTC"
-        },
-        {
-            "id": "rf16",
-            "title": "Bitacora",
             "type": "text",
             "alt": "",
             "content": "Inmediatamente me pongo alerta y empiezo a caminar mirando todos los canteros y me voy desviando de mi destino en busca de más hongos.",
@@ -154,7 +145,7 @@
             "date": "May 11, 2017 15:15:15 UTC"
         },
         {
-            "id": "rf17",
+            "id": "rf16",
             "title": "Bitacora",
             "type": "img",
             "alt": "registro fotográfico de hongos urbanos",
@@ -163,7 +154,7 @@
             "date": "May 11, 2017 15:15:15 UTC"
         },
         {
-            "id": "rf18",
+            "id": "rf17",
             "title": "Bitacora",
             "type": "img",
             "alt": "registro fotográfico de hongos urbanos",
@@ -172,7 +163,7 @@
             "date": "May 11, 2017 15:15:15 UTC"
         },
         {
-            "id": "rf19",
+            "id": "rf18",
             "title": "Bitacora",
             "type": "img",
             "alt": "registro fotográfico de hongos urbanos",
@@ -181,7 +172,7 @@
             "date": "May 11, 2017 15:15:15 UTC"
         },
         {
-            "id": "rf20",
+            "id": "rf19",
             "title": "Bitacora",
             "type": "img",
             "alt": "registro fotográfico de hongos urbanos",
@@ -190,7 +181,7 @@
             "date": "May 11, 2017 15:15:15 UTC"
         },
         {
-            "id": "rf21",
+            "id": "rf20",
             "title": "Bitacora",
             "type": "img",
             "alt": "registro fotográfico de hongos urbanos",
@@ -199,7 +190,7 @@
             "date": "May 11, 2017 15:15:15 UTC"
         },
         {
-            "id": "rf22",
+            "id": "rf21",
             "title": "Bitacora",
             "type": "img",
             "alt": "registro fotográfico de hongos urbanos",
@@ -208,7 +199,7 @@
             "date": "June 05, 2017 15:15:15 UTC"
         },
         {
-            "id": "rf23",
+            "id": "rf22",
             "title": "Bitacora",
             "type": "text",
             "alt": "",
@@ -217,7 +208,7 @@
             "date": "July 07, 2017 15:15:15 UTC"
         },
         {
-            "id": "rf24",
+            "id": "rf23",
             "title": "Bitacora",
             "type": "img",
             "alt": "registro fotográfico de hongos urbanos",
@@ -226,7 +217,7 @@
             "date": "May 10, 2017 15:15:15 UTC"
         },
         {
-            "id": "rf25",
+            "id": "rf24",
             "title": "Bitacora",
             "type": "img",
             "alt": "registro fotográfico de hongos urbanos",
@@ -235,7 +226,7 @@
             "date": "May 11, 2017 15:15:15 UTC"
         },
         {
-            "id": "rf26",
+            "id": "rf25",
             "title": "Bitacora",
             "type": "img",
             "alt": "registro fotográfico de hongos urbanos",
@@ -244,7 +235,7 @@
             "date": "May 13, 2017 15:15:15 UTC"
         },
         {
-            "id": "rf27",
+            "id": "rf26",
             "title": "Bitacora",
             "type": "img",
             "alt": "registro fotográfico de hongos urbanos",
@@ -253,7 +244,7 @@
             "date": "May 18, 2017 15:15:15 UTC"
         },
         {
-            "id": "rf28",
+            "id": "rf27",
             "title": "Bitacora",
             "type": "img",
             "alt": "registro fotográfico de hongos urbanos",
@@ -262,7 +253,7 @@
             "date": "May 28, 2017 15:15:15 UTC"
         },
         {
-            "id": "rf29",
+            "id": "rf28",
             "title": "Bitacora",
             "type": "img",
             "alt": "registro fotográfico de hongos urbanos",
@@ -271,16 +262,7 @@
             "date": "June 06, 2017 15:15:15 UTC"
         },
         {
-            "id": "rf30",
-            "title": "Bitacora",
-            "type": "img",
-            "alt": "registro fotográfico de hongos urbanos",
-            "content": "",
-            "src": "/images/registroFotografico/2017-06-05.gif",
-            "date": "May 05, 2017 15:15:15 UTC"
-        },
-        {
-            "id": "rf31",
+            "id": "rf29",
             "title": "Bitacora",
             "type": "text",
             "alt": "",
@@ -289,7 +271,7 @@
             "date": "October 16, 2018 15:15:15 UTC"
         },
         {
-            "id": "rf32",
+            "id": "rf30",
             "title": "Bitacora",
             "type": "text",
             "alt": "",
@@ -298,7 +280,7 @@
             "date": "October 16, 2018 15:15:15 UTC"
         },
         {
-            "id": "rf33",
+            "id": "rf31",
             "title": "Bitacora",
             "type": "img",
             "alt": "registro fotográfico de hongos urbanos",
@@ -307,7 +289,7 @@
             "date": "October 16, 2018 15:15:15 UTC"
         },
         {
-            "id": "rf34",
+            "id": "rf32",
             "title": "Bitacora",
             "type": "img",
             "alt": "registro fotográfico de hongos urbanos",
@@ -316,7 +298,7 @@
             "date": "October 16, 2018 15:15:15 UTC"
         },
         {
-            "id": "rf35",
+            "id": "rf33",
             "title": "Bitacora",
             "type": "text",
             "alt": "",
@@ -325,7 +307,7 @@
             "date": "November 28, 2018 15:15:15 UTC"
         },
         {
-            "id": "rf36",
+            "id": "rf34",
             "title": "Bitacora",
             "type": "img",
             "alt": "registro fotográfico de hongos urbanos",
@@ -334,7 +316,7 @@
             "date": "November 28, 2018 15:15:15 UTC"
         },
         {
-            "id": "rf37",
+            "id": "rf35",
             "title": "Bitacora",
             "type": "text",
             "alt": "",
@@ -343,7 +325,7 @@
             "date": "December 06, 2018 15:15:15 UTC"
         },
         {
-            "id": "rf38",
+            "id": "rf36",
             "title": "Bitacora",
             "type": "img",
             "alt": "registro fotográfico de hongos urbanos",
@@ -352,7 +334,7 @@
             "date": "December 06, 2018 15:15:15 UTC"
         },
         {
-            "id": "rf39",
+            "id": "rf37",
             "title": "Bitacora",
             "type": "text",
             "alt": "",
@@ -361,11 +343,29 @@
             "date": "January 31, 2019 15:15:15 UTC"
         },
         {
-            "id": "rf40",
+            "id": "rf38",
             "title": "Bitacora",
             "type": "text",
             "alt": "",
             "content": "Aquí encuentro algunos ejemplares pequeños.",
+            "src": "",
+            "date": "January 31, 2019 15:15:15 UTC"
+        },
+        {
+            "id": "rf39",
+            "title": "Bitacora",
+            "type": "img",
+            "alt": "registro fotográfico de hongos urbanos",
+            "content": "",
+            "src": "/images/registroFotografico/2019-01-31(2).gif",
+            "date": "January 31, 2019 15:15:15 UTC"
+        },
+        {
+            "id": "rf40",
+            "title": "Bitacora",
+            "type": "text",
+            "alt": "",
+            "content": "Por otro lado, en leña recientemente cortada encuentro el micelio expuesto. Lo fotografío ya que nunca lo había visto en estado natural.",
             "src": "",
             "date": "January 31, 2019 15:15:15 UTC"
         },
@@ -375,29 +375,11 @@
             "type": "img",
             "alt": "registro fotográfico de hongos urbanos",
             "content": "",
-            "src": "/images/registroFotografico/2019-01-31(2).gif",
-            "date": "January 31, 2019 15:15:15 UTC"
-        },
-        {
-            "id": "rf42",
-            "title": "Bitacora",
-            "type": "text",
-            "alt": "",
-            "content": "Por otro lado, en leña recientemente cortada encuentro el micelio expuesto. Lo fotografío ya que nunca lo había visto en estado natural.",
-            "src": "",
-            "date": "January 31, 2019 15:15:15 UTC"
-        },
-        {
-            "id": "rf43",
-            "title": "Bitacora",
-            "type": "img",
-            "alt": "registro fotográfico de hongos urbanos",
-            "content": "",
             "src": "/images/registroFotografico/2019-01-31.gif",
             "date": "January 31, 2019 15:15:15 UTC"
         },
         {
-            "id": "rf44",
+            "id": "rf42",
             "title": "Bitacora",
             "type": "text",
             "alt": "",
@@ -406,7 +388,7 @@
             "date": "January 31, 2019 15:15:15 UTC"
         },
         {
-            "id": "rf45",
+            "id": "rf43",
             "title": "Bitacora",
             "type": "img",
             "alt": "registro fotográfico de hongos urbanos",
@@ -764,7 +746,7 @@
             "type": "img",
             "alt": "Cultivo",
             "content": "",
-            "src": "/images/cultivo/2018-11-03.JPG",
+            "src": "/images/cultivo/2018-11-03.png",
             "date": "Decembar 04, 2017 15:15:15 UTC"
         }
     ]
