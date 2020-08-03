@@ -4,10 +4,7 @@ import styled from "styled-components/macro";
 
 import Icon from "../Icon/Icon";
 
-import {
-  disableBodyScroll,
-  clearAllBodyScrollLocks,
-} from "body-scroll-lock";
+import { disableBodyScroll, clearAllBodyScrollLocks } from "body-scroll-lock";
 
 // ANIMATION:
 import { gsap } from "gsap";
@@ -77,11 +74,13 @@ const CloseBtn = styled.button`
 const Zoom = ({ active, src, onClose }) => {
   const wrapperRef = useRef();
 
+  const BlockScroll = () => {
+    active === true
+      ? disableBodyScroll(wrapperRef.current)
+      : clearAllBodyScrollLocks();
+  };
   useEffect(() => {
-    const blockScroll =
-      active === true
-        ? disableBodyScroll(wrapperRef.current)
-        : clearAllBodyScrollLocks();
+    BlockScroll();
 
     const tl = new Timeline({});
 
