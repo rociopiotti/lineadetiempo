@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Routes from "./router/Routes";
 import Theme from "./theme/Theme";
 import Zoom from "./components/Zoom/Zoom";
+import Intro from "./components/Intro/Intro";
 
 // STYLED
 import styled from "styled-components/macro";
@@ -44,16 +45,12 @@ const App = () => {
   const [dictionary, setDictionary] = useState({});
   const [registro, setRegistro] = useState([]);
   const [cultivo, setCultivo] = useState([]);
-  const [isLoading, setIsLoading] = useState(false);
 
   /// FETCH DATA
   useEffect(() => {
     const fetchData = async () => {
-      setIsLoading(true);
       const response = await axios.get(URL_DB);
-      
       setData(response.data);
-      setIsLoading(false);
     };
     fetchData();
   }, []);
@@ -104,9 +101,7 @@ const App = () => {
     });
   };
 
-  console.log("----------------> isLoading:", isLoading);
   return (
-    
     <PageManagerContext.Provider
       value={{
         onClickElement: onClickElement,
@@ -124,6 +119,7 @@ const App = () => {
             content='Linea de tiempo para Proyecto fungi 2020'
           />
         </Helmet>
+        <Intro />
         <Zoom active={modal.active} src={modal.src} onClose={handleZoomClose} />
         <Container>
           <Routes />

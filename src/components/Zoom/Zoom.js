@@ -22,8 +22,7 @@ const Wrapper = styled.div`
   align-items: center;
   justify-content: center;
   background-color: rgba(0, 0, 0, 0.8);
-  font-family: ${(props) => props.theme.fonts[0]};
-  color: ${(props) => props.theme.colors.darkgrey[0]};
+  font-family: ${(props) => props.theme.fonts};
   display: none;
   opacity: 0;
   z-index: 3;
@@ -77,14 +76,10 @@ const CloseBtn = styled.button`
 const Zoom = ({ active, src, onClose }) => {
   const wrapperRef = useRef();
 
-  const BlockScroll = () => {
+  useEffect(() => {
     active === true
       ? disableBodyScroll(wrapperRef.current)
       : clearAllBodyScrollLocks();
-  };
-
-  useEffect(() => {
-    BlockScroll();
 
     const tl = new Timeline({});
 

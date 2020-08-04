@@ -57,7 +57,7 @@ const About = () => {
         <SectionHeader>Linea de tiempo</SectionHeader>
         <SeparationLine />
         <SectionContent>
-          Línea de tiempo es un proyecto de website que reúne el material de
+          Línea de tiempo es un sitio web que reúne el material de
           registro audiovisual del proyecto artístico Proyecto Fungi realizado
           por Rocío Piotti.
         </SectionContent>
