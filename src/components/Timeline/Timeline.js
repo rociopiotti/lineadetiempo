@@ -3,6 +3,7 @@ import styled from "styled-components/macro";
 
 import { ContainerColumn } from "../../theme/Theme";
 
+import Icon from "../Icon/Icon";
 const SectionHeader = styled.h2`
   width: 100%;
   font-size: ${(props) => props.theme.fontSizes.medium};
@@ -18,6 +19,7 @@ const ElementContainer = styled.div`
   justify-content: center;
   margin-bottom: 10vh;
   -webkit-tap-highlight-color: transparent;
+  position: relative;
 `;
 
 const TextContent = styled.p`
@@ -48,6 +50,20 @@ const ImgContent = styled.img`
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
 `;
+const IconContainer = styled.div`
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  color: ${(props) => props.theme.colors.white};
+  font-size: ${(props) => props.theme.fontSizes.medium};
+  bottom: 0.8vh;
+  right: 1vw;
+  @media (min-width: 1366px) {
+    right: 0.5vw;
+  }
+`;
 
 const Timeline = ({ database, title, onClickElement }) => {
   const renderElement = database.map((item, index) => {
@@ -65,7 +81,9 @@ const Timeline = ({ database, title, onClickElement }) => {
           <ElementContainer key={index} onClick={() => onClickElement(item.id)}>
             {/* <ImgContent src={`https://www.rociopiotti.com/public/webdesign/lineadetiempo/${item.src}`} alt={item.alt} /> */}
             <ImgContent src={item.src} alt={item.alt} />
-
+            <IconContainer>
+              <Icon type='expand' />
+            </IconContainer>
           </ElementContainer>
         );
         break;

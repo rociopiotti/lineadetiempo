@@ -8,7 +8,7 @@ import {
   faBehance,
 } from "@fortawesome/free-brands-svg-icons";
 
-import { faTimes, faAngleRight } from "@fortawesome/free-solid-svg-icons";
+import { faTimes, faExpand } from "@fortawesome/free-solid-svg-icons";
 
 const Icons = (props) => {
   // DEFINIR ICONS:
@@ -26,8 +26,8 @@ const Icons = (props) => {
     case "close":
       faIcon = faTimes;
       break;
-    case "arrowRight":
-      faIcon = faAngleRight;
+    case "expand":
+      faIcon = faExpand;
       break;
     default:
       faIcon = null;
