@@ -63,7 +63,9 @@ const Timeline = ({ database, title, onClickElement }) => {
       case "img":
         element = (
           <ElementContainer key={index} onClick={() => onClickElement(item.id)}>
-            <ImgContent src={`https://www.rociopiotti.com/public/webdesign/lineadetiempo/${item.src}`} alt={item.alt} />
+            {/* <ImgContent src={`https://www.rociopiotti.com/public/webdesign/lineadetiempo/${item.src}`} alt={item.alt} /> */}
+            <ImgContent src={item.src} alt={item.alt} />
+
           </ElementContainer>
         );
         break;

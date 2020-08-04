@@ -15,8 +15,7 @@ import axios from "axios";
 // DATABASE PATH
 import { URL_DB } from "./utils/path";
 
-
-import { Helmet } from 'react-helmet';
+import { Helmet } from "react-helmet";
 
 const Container = styled.div`
   position: relative;
@@ -45,14 +44,17 @@ const App = () => {
   const [dictionary, setDictionary] = useState({});
   const [registro, setRegistro] = useState([]);
   const [cultivo, setCultivo] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
 
   /// FETCH DATA
   useEffect(() => {
     const fetchData = async () => {
+      setIsLoading(true);
       const response = await axios.get(URL_DB);
+      
       setData(response.data);
+      setIsLoading(false);
     };
-
     fetchData();
   }, []);
 
@@ -102,7 +104,9 @@ const App = () => {
     });
   };
 
+  console.log("----------------> isLoading:", isLoading);
   return (
+    
     <PageManagerContext.Provider
       value={{
         onClickElement: onClickElement,
