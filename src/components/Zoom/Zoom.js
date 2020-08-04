@@ -96,8 +96,7 @@ const Zoom = ({ active, src, onClose }) => {
         <CloseBtn onClick={onClose}>
           <Icon type='close' />
         </CloseBtn>
-        {/* <ImgContent src={`https://www.rociopiotti.com/public/webdesign/lineadetiempo/${src}`} /> */}
-        <ImgContent src={src} />
+        <ImgContent src={`https://www.rociopiotti.com/public/webdesign/lineadetiempo/${src}`} />
       </ElementContainer>
     </Wrapper>
   );
