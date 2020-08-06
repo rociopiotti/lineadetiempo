@@ -72,7 +72,6 @@ const Desctiption = styled.p`
   }
 `;
 
-
 const Intro = () => {
   const wrapperRef = useRef();
   const titleRef = useRef();
@@ -80,7 +79,6 @@ const Intro = () => {
   const description2 = useRef();
   const description3 = useRef();
   const description4 = useRef();
-  const description5 = useRef();
 
   useEffect(() => {
     disableBodyScroll(wrapperRef.current);
@@ -157,18 +155,6 @@ const Intro = () => {
       ease: ease,
     });
 
-    tl.to(description5.current, durationSlow, {
-      opacity,
-      display: "flex",
-      ease: ease,
-    });
-    tl.to(description5.current, durationSlow, {
-      delay,
-      opacity: 0,
-      display: "none",
-      ease: ease,
-    });
-
     tl.to(wrapperRef.current, durationFast, {
       opacity: 0,
       display: "none",
@@ -187,15 +173,12 @@ const Intro = () => {
         <Desctiption ref={description2}>
           En paralelo al cultivo de micelio realizamos un registro fotográfico
           de hongos urbanos.<br></br> Este registro acompañó el proceso de
-          trabajo.
+          trabajo, permitiendo la observación del micelio en un entorno natural.
         </Desctiption>
         <Desctiption ref={description3}>
-          Permitiendo la observación del micelio en un entorno natural.
+          El material está organizado cronológicamente.
         </Desctiption>
         <Desctiption ref={description4}>
-          El material está organizado en orden cronológico.
-        </Desctiption>
-        <Desctiption ref={description5}>
           En el lado izquierdo se encuentra un registro fotográfico de hongos
           urbanos.<br></br>En el derecho se pueden ver el proceso de cultivo
           realizado en el taller.

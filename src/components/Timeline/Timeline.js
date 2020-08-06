@@ -81,6 +81,7 @@ const Timeline = ({ database, title, onClickElement }) => {
           <ElementContainer key={index} onClick={() => onClickElement(item.id)}>
             <ImgContent
               src={`https://www.rociopiotti.com/public/webdesign/lineadetiempo/${item.src}`}
+             
               alt={item.alt}
             />
             <IconContainer>
