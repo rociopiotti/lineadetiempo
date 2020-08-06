@@ -143,12 +143,12 @@ const Intro = () => {
       ease: ease,
     });
 
-    tl.to(description4.current, durationFast, {
+    tl.to(description4.current, durationSlow, {
       opacity,
       display: "flex",
       ease: ease,
     });
-    tl.to(description4.current, durationFast, {
+    tl.to(description4.current, durationSlow, {
       delay,
       opacity: 0,
       display: "none",
