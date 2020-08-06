@@ -8,6 +8,7 @@ const theme = {
   },
   fonts: ["sans-serif", "Mulish"],
   fontSizes: {
+    extraextrasmall: "0.5rem",
     extrasmall: "0.7rem",
     small: "1rem",
     medium: "1.5rem",

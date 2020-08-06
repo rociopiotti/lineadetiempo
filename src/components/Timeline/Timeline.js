@@ -42,7 +42,6 @@ const TextContent = styled.p`
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 0vh 4vw;
   line-height: 1.5em;
   font-size: ${(props) => props.theme.fontSizes.extrasmall};
 
@@ -50,20 +49,21 @@ const TextContent = styled.p`
     font-size: ${(props) => props.theme.fontSizes.small};
   }
 `;
-const TextContentDate = styled(TextContent)`
+const TextContentDate = styled.cite`
   width: 100%;
   height: auto;
+  margin-right: 6vw;
+  margin-top: 2vh;
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
   text-align: right;
-  padding: 0vh 4vw;
   line-height: 1.5em;
-  font-size: ${(props) => props.theme.fontSizes.extrasmall};
-
+  font-size: ${(props) => props.theme.fontSizes.extraextrasmall};
+  font-weight: 300;
   @media (min-width: 768px) {
-    font-size: ${(props) => props.theme.fontSizes.small};
+    font-size: ${(props) => props.theme.fontSizes.extrasmall};
   }
 `;
 
