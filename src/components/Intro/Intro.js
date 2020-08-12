@@ -64,10 +64,12 @@ const Desctiption = styled.p`
   text-align: center;
   line-height: 1.8em;
   font-family: ${(props) => props.theme.fonts[1]};
-  font-size: ${(props) => props.theme.fontSizes.medium};
+  font-size: ${(props) => props.theme.fontSizes.small};
   opacity: 0;
   display: none;
   @media (min-width: 1366px) {
+    font-size: ${(props) => props.theme.fontSizes.medium};
+
     width: 50vw;
   }
 `;
