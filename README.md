@@ -1,66 +1,43 @@
 
 # Linea de Tiempo
 
-  
-
-Diseño y desarrollo sitio web.
-
-  
+Site created by Rocío Piotti in 2021.
+The site was created for the presentation of the final year project, it shows the work process during the investigation in "Proyecto Fungi".
 
 ## Demo
 
-  
 
-Para ver el demo [click aquí](https://www.rociopiotti.com/public/webdesign/lineadetiempo/)
+To see the demo [click aquí](https://www.rociopiotti.com/public/webdesign/lineadetiempo/)
 
-  
-### Documento del proyecto
+### Developed by
 
-
-Para ver el documento [click aquí](https://www.rociopiotti.com/public/webdesign/lineadetiempo/documentolineadetiempo.pdf)
-
-
-### Desarrollado por
-
-  
 
 : Rocío Piotti
 
-: [rociopiotti.com](https://www.rociopiotti.com/)
 
-: ropiotti@gmail.com
+## Work Done
 
-  
-  
-  
 
-## Trabajos realizados
 
-  
+- Developed in ReactJs.
 
-Programación con ReactJs.
+- Layout with JSX y Sass.
 
-Maquetación con JSX y Sass.
+- Design in Figma.
 
-Diseño en Figma.
+- Image edition with Adobe Photoshop.
 
-Edición de imágenes con Adobe Photoshop.
+- Videos edition with Adobe Premiere Pro.
 
-Edición de video con Adobe Premiere Pro.  
+- Content creation.
 
-Creación de contenido.  
 
-Testeado en navegadores: Chrome, Opera, Safari, Microsoft Edge.  
 
-Testeado en dispositivos: Iphone, Ipad, Android.
-
-  
-
-## Tecnologías utilizadas
-
-- Javascript
+## Technologies use
 
 - ReactJs
+
+- Javascript
 
 - Html5
 
@@ -68,11 +45,7 @@ Testeado en dispositivos: Iphone, Ipad, Android.
 
 - Sass
 
-- Motor de animación [Gsap](https://www.npmjs.com/package/gsap/v/3.2.6)
-
-- Servidor PHP
-
-- Create React App
+- Animations [Gsap](https://www.npmjs.com/package/gsap/v/3.2.6)
 
 -  [React Router](https://www.npmjs.com/package/react-router-dom)
 
@@ -82,17 +55,6 @@ Testeado en dispositivos: Iphone, Ipad, Android.
 
 -  [React Device Detect](https://www.npmjs.com/package/react-device-detect)
 
-  
 
-## Concepto
 
-  
-
-Línea de tiempo es un proyecto de website que reúne el material de registro audiovisual del proyecto artístico Proyecto Fungi realizado por Rocío Piotti.
-  
-
-<hr>
-
-<br>
-
-#ReactJs #JSX #Sass #Node #ReactRouter #axios #Gsap #mobileFirst #layout #webdesign #responsivedesign #git #Github
+ReactJs | JSX | Sass | ReactRouter | axios | Gsap
