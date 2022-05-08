@@ -6,7 +6,7 @@ Site created by Rocío Piotti in 2021. The site was created for the presentation
 ## Demo
 
 
-To see the demo [click aquí](https://linea-de-tiempo.netlify.app/)
+To see the demo [click here](https://linea-de-tiempo.netlify.app/)
 
 ### Developed by
 
