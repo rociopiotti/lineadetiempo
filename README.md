@@ -1,8 +1,7 @@
 
-# Linea de Tiempo
+# Línea de Tiempo
 
-Site created by Rocío Piotti in 2021.
-The site was created for the presentation of the final year project, it shows the work process during the investigation in "Proyecto Fungi".
+Site created by Rocío Piotti in 2021. The site was created for the presentation of the final year project, it shows the work process during the investigation in "Proyecto Fungi".
 
 ## Demo
 
@@ -47,14 +46,10 @@ To see the demo [click aquí](https://www.rociopiotti.com/public/webdesign/linea
 
 - Animations [Gsap](https://www.npmjs.com/package/gsap/v/3.2.6)
 
--  [React Router](https://www.npmjs.com/package/react-router-dom)
+- [React Router](https://www.npmjs.com/package/react-router-dom)
 
--  [Axios](https://www.npmjs.com/package/axios)
+- [Axios](https://www.npmjs.com/package/axios)
 
--  [Fortawesome](https://www.npmjs.com/package/@fortawesome/react-fontawesome)
+- [Fortawesome](https://www.npmjs.com/package/@fortawesome/react-fontawesome)
 
--  [React Device Detect](https://www.npmjs.com/package/react-device-detect)
-
-
-
-ReactJs | JSX | Sass | ReactRouter | axios | Gsap
+- [React Device Detect](https://www.npmjs.com/package/react-device-detect)
