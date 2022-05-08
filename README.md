@@ -5,18 +5,9 @@ Site created by Rocío Piotti in 2021. The site was created for the presentation
 
 ## Demo
 
-
 To see the demo [click here](https://linea-de-tiempo.netlify.app/)
 
-### Developed by
-
-
-: Rocío Piotti
-
-
 ## Work Done
-
-
 
 - Developed in ReactJs.
 
@@ -29,7 +20,6 @@ To see the demo [click here](https://linea-de-tiempo.netlify.app/)
 - Videos edition with Adobe Premiere Pro.
 
 - Content creation.
-
 
 
 ## Technologies use
@@ -53,3 +43,9 @@ To see the demo [click here](https://linea-de-tiempo.netlify.app/)
 - [Fortawesome](https://www.npmjs.com/package/@fortawesome/react-fontawesome)
 
 - [React Device Detect](https://www.npmjs.com/package/react-device-detect)
+
+
+### Developed by
+
+
+: Rocío Piotti
